@@ -1,0 +1,60 @@
+<section class="main-banner">
+  <owl-carousel-o [options]="customOptions">
+    <ng-container *ngFor="let slide of slidesData">
+      <ng-template carouselSlide>
+        <div class="carousel-cont" [ngStyle]="{'background-image': 'url(' + slide.bg + ')'}">
+          <div class="carousel-info">
+            <h5>{{slide.type}}</h5>
+            <h1>{{slide.name}}</h1>
+            <p>{{slide.description}}</p>
+            <a>Придбати</a>
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</section>
+
+<section class="mini-banners-section">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="mini-banner">
+          <div class="mini-banner-cont">
+            <h3>Більше 20 видів табаків</h3>
+            <a href="#">Весь асортимент</a>
+          </div>
+          <div class="mini-banner-img">
+            <img [src]="'assets/images/mini-banner1.png'" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="mini-banner">
+          <div class="mini-banner-cont">
+            <h3>Кальяни і аксесуари</h3>
+            <a href="#">Онлайн з доставкою</a>
+          </div>
+          <div class="mini-banner-img">
+            <img [src]="'assets/images/mini-banner2.png'" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="insta-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2>Ми в інстаграмі</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3" *ngFor="let itemUrl of instagramImgs">
+        <div class="insta-section-item" [ngStyle]="{'background-image': 'url(' + itemUrl + ')'}"></div>
+      </div>
+    </div>
+  </div>
+</section>

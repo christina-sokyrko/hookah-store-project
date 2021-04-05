@@ -1,0 +1,28 @@
+html, body {
+  background-color: #05070d;
+}
+
+.owl-carousel .owl-item {
+}
+
+.owl-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.owl-dot {
+  span {
+    width: 80px !important;
+    height: 3px !important;
+    background-color: rgba(79, 193, 203, 0.3) !important;
+  }
+
+  &.active {
+    span {
+      background-color: rgba(79, 193, 203, 1) !important;
+    }
+  }
+}
+
