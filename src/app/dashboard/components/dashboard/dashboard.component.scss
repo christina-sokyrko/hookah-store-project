@@ -1,3 +1,6 @@
+//.main-banner {
+  //background: -webkit-image-set(url('src/assets/images/group-9_2021-04-08/group-9.jpg') 1x, url('src/assets/images/group-9_2021-04-08/group-9@2x.jpg') 2x, url('src/assets/images/group-9_2021-04-08/group-9@3x.jpg') 3x);
+//}
 .carousel-cont {
   width: 100%;
   max-height: 100%;
@@ -26,24 +29,48 @@
   h5 {
     font-size: 12px;
     font-weight: bold;
+    letter-spacing: 0.5px;
     color: #4fc1cb;
   }
 
   h1 {
-    font-size: 48px;
-    font-weight: bold;
-    color: #ffffff;
+   width: 267px;
+   height: 68px;
+   margin: 8px 166px 16px 167px;
+   font-family: Ubuntu;
+   font-size: 48px;
+   font-weight: bold;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: 1.42;
+   letter-spacing: normal;
+   color: #ffffff;
   }
 
   p {
-    font-size: 16px;
-    color: #ffffff;
+ width: 600px;
+ height: 84px;
+ margin: 16px 0 48px;
+ font-family: Montserrat;
+ font-size: 16px;
+ font-weight: lighter;
+ font-stretch: normal;
+ font-style: normal;
+ line-height: 1.75;
+ letter-spacing: 2px;
+ text-align: center;
+ color: #ffffff;
   }
 
   a {
     padding: 14px 36px;
+    font-family: Montserrat;
     font-size: 14px;
     font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: 1px;
     color: #ffffff;
     border-radius: 4px;
     text-align: center;
