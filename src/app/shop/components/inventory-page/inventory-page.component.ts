@@ -9,14 +9,14 @@ import {Subject} from 'rxjs';
 })
 export class InventoryPageComponent implements OnInit, OnDestroy {
     public inventoryDestroyed$: Subject<void> = new Subject<void>();
-    Tobaccos: any[];
-    Hookahs: any[];
-    Charcoals: any[];
-    Accessories: any[];
-    Items: any[];
+    Tobaccos;
+    Hookahs;
+    Charcoals;
+    Accessories;
+    Items;
 
     constructor(
-        public Is: InventoryService
+        public inventoryService: InventoryService
     ) {
     }
 
@@ -25,16 +25,16 @@ export class InventoryPageComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit(): void {
-        this.Is.getAllTobaccos().subscribe(tobaccos => {
+        this.inventoryService.getAllTobaccos().subscribe(tobaccos => {
             this.Tobaccos = tobaccos;
         });
-        this.Is.getAllCharcoals().subscribe(charcoals => {
+        this.inventoryService.getAllCharcoals().subscribe(charcoals => {
             this.Charcoals = charcoals;
         });
-        this.Is.getAllHookahs().subscribe(hookahs => {
+        this.inventoryService.getAllHookahs().subscribe(hookahs => {
             this.Hookahs = hookahs;
         });
-        this.Is.getAllAccessories().subscribe(accessories => {
+        this.inventoryService.getAllAccessories().subscribe(accessories => {
             this.Accessories = accessories;
         });
     }

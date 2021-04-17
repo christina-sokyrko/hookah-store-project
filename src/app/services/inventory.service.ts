@@ -14,25 +14,17 @@ export class InventoryService {
     }
 
     getAllTobaccos() {
-        return this.http.get(environment.apiBaseUrl + '/tobaccos').pipe(map((res: any) => {
-            return res;
-        }));
+        return this.http.get(environment.apiBaseUrl + '/tobaccos');
     }
     getAllHookahs() {
-        return this.http.get(environment.apiBaseUrl + '/hookahs').pipe(map((res: any) => {
-            return res;
-        }));
+        return this.http.get(environment.apiBaseUrl + '/hookahs');
     }
     getAllCharcoals() {
-        return this.http.get(environment.apiBaseUrl + '/charcoals').pipe(map((res: any) => {
-            return res;
-        }));
+        return this.http.get(environment.apiBaseUrl + '/charcoals');
     }
 
     getAllAccessories() {
-        return this.http.get(environment.apiBaseUrl + '/accessories').pipe(map((res: any) => {
-            return res;
-        }));
+        return this.http.get(environment.apiBaseUrl + '/accessories');
     }
 }
 
