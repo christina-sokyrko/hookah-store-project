@@ -23,8 +23,14 @@ export class InventoryService {
             return res;
         }));
     }
-    getAllCharcoal() {
+    getAllCharcoals() {
         return this.http.get(environment.apiBaseUrl + '/charcoals').pipe(map((res: any) => {
+            return res;
+        }));
+    }
+
+    getAllAccessories() {
+        return this.http.get(environment.apiBaseUrl + '/accessories').pipe(map((res: any) => {
             return res;
         }));
     }

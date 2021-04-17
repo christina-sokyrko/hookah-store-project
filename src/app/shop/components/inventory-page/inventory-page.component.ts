@@ -11,7 +11,8 @@ export class InventoryPageComponent implements OnInit, OnDestroy {
     public inventoryDestroyed$: Subject<void> = new Subject<void>();
     Tobaccos: any[];
     Hookahs: any[];
-    Charcoal: any[];
+    Charcoals: any[];
+    Accessories: any[];
     Items: any[];
 
     constructor(
@@ -27,11 +28,14 @@ export class InventoryPageComponent implements OnInit, OnDestroy {
         this.Is.getAllTobaccos().subscribe(tobaccos => {
             this.Tobaccos = tobaccos;
         });
-        this.Is.getAllCharcoal().subscribe(charcoal => {
-            this.Charcoal = charcoal;
+        this.Is.getAllCharcoals().subscribe(charcoals => {
+            this.Charcoals = charcoals;
         });
         this.Is.getAllHookahs().subscribe(hookahs => {
             this.Hookahs = hookahs;
+        });
+        this.Is.getAllAccessories().subscribe(accessories => {
+            this.Accessories = accessories;
         });
     }
 
