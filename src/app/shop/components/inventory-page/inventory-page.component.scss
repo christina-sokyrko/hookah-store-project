@@ -1,6 +1,7 @@
 .main-wrapper {
- margin-top: 63px;
+  margin-top: 63px;
 }
+
 .navbar {
   height: 110px;
   width: 1220px;
@@ -9,6 +10,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 .left-small {
   width: 110px;
   color: #d8d8d8;
@@ -16,38 +18,46 @@
   display: flex;
   justify-content: space-around;
 }
+
 .arrow {
   font-size: 20px;
   margin-top: 7px;
 }
+
 .calians {
   font-size: 12px;
   margin-top: 15px;
 }
+
 .left-big {
   width: 300px;
 
   display: flex;
   justify-content: space-between;
 }
+
 .calians-2 {
   font-size: 30px;
   color: white;
 }
+
 .showed {
   font-size: 14px;
   color: #aaaebf;
   margin-top: 12px;
 }
+
 .criss-cross {
   background-color: #05080f;
   border: solid #05080f;
 }
+
 .navbar-buttons {
   width: 355px;
   display: flex;
   justify-content: space-between;
 }
+
 .top-btn {
   width: 170px;
   height: 40px;
@@ -56,34 +66,40 @@
   display: flex;
   justify-content: space-around;
 }
+
 .btn-img {
   margin-top: 5px;
 }
+
 .inventory {
   display: flex;
   flex-direction: row;
 }
+
 .side-bar {
- width: 360px;
- height: 499px;
- margin: 16px 24px 115px 0;
- padding: 24px 20px;
- border-radius: 4px;
- background-color: #1e2127;
- font-family: Montserrat;
+  width: 360px;
+  height: 100%;
+  margin: 16px 24px 115px 0;
+  padding: 24px 20px;
+  border-radius: 4px;
+  background-color: #1e2127;
+  font-family: Montserrat;
 }
+
 .menu {
   font-size: 16px;
   color: #c9ccdb;
   margin-left: 12px;
 }
+
 .menu-line {
   width: 320px;
   margin: 24px 5 5;
   opacity: 0.1;
   background-color: #efeff0;
 }
-.plus-minus{
+
+.plus-minus {
   margin-left: 300px;
   margin-top: -60px;
   font-size: 30px;
@@ -91,25 +107,36 @@
   background-color: #1e2127;
   border: solid #1e2127;
 }
+
 .choosing-category {
   font-size: 14px;
   color: #b8bccb;
 }
+
 .choosing {
   margin-right: 5px;
 }
+
 .use-filters {
   width: 320px;
-   height: 42px;
-   margin: 156px 0 0;
-   padding: 10px 82px;
-   border-radius: 4px;
-   background-color: #4fc1cb;
-   margin-top: 70px;
+  height: 42px;
+  margin: 156px 0 0;
+  padding: 10px 82px;
+  border-radius: 4px;
+  background-color: #4fc1cb;
+  margin-top: 70px;
 }
+
 .items {
- width: 1000px;
+  width: 1000px;
 }
+
+.description {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+}
+
 .item {
   height: 324px;
   width: 314px;
@@ -119,28 +146,53 @@
   border: solid 1px rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.05);
 }
+
 .item-name {
   font-size: 16px;
   color: white;
-   margin-top: 20px;
-   margin-left: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
 }
+
 .price {
-  margin-left: 30px;
+  margin-left: 12px;
 }
+
 .number {
   font-size: 24px;
   color: white;
+  margin-bottom: 0;
+  margin-top: 10px;
 }
+
 .availability {
   font-size: 12px;
   color: #52c24e;
+  margin-bottom: 0;
 }
 
 .shop {
   margin-left: 80px;
   width: 70px;
   height: 70px;
-  background-color: rgba(255, 255, 255, 0.00);
-  border: rgba(255, 255, 255, 0.00);
+  background: none;
+  border: none;
+}
+
+//*Accordion*//
+
+::ng-deep .card {
+  margin-bottom: 20px;
+  background-color: #1e2226;
+  border: none;
+  color: white;
+}
+
+::ng-deep .card .card-header {
+  border-bottom: solid 1px #2e3236;
+}
+
+::ng-deep .card .card-header .btn-link {
+  color: white;
+  text-decoration: none;
 }
