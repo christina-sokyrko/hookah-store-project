@@ -12,4 +12,4 @@ export class ItemPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-}
+};
