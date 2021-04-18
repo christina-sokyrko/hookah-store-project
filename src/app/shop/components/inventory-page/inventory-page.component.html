@@ -30,40 +30,49 @@
     </section>
     <section class="inventory">
         <div class="side-bar">
-            <div class="row menu-section">
-                <p class="menu">Категорії</p>
-                <button class="plus-minus">-</button>
-            </div>
-            <div class="choosing-category">
-                <input type="checkbox" name="choose" class="choosing"
-                       (click)="changeData(Hookahs)">
-                <label for="choose">Кальяни</label>
-                <br/>
-                <input type="checkbox" name="choose" class="choosing"
-                       (click)="changeData(Charcoals)">
-                <label for="choose">Вугілля</label>
-                <br/>
-                <input type="checkbox" name="choose" class="choosing"
-                       (click)="changeData(Tobaccos)">
-                <label for="choose">Табак</label>
-                <br/>
-                <input type="checkbox" name="choose" class="choosing"
-                       (click)="changeData(Accessories)">
-                <label for="choose">Аксесуари</label>
-            </div>
-            <hr class="menu-line"/>
-            <br/>
-            <div class="row menu-section">
-                <p class="menu">Виробник</p>
-                <button class="plus-minus">+</button>
-            </div>
-            <hr class="menu-line"/>
-            <br/>
-            <div class="row menu-section">
-                <p class="menu">Ціна</p>
-                <button class="plus-minus">+</button>
-            </div>
-            <hr class="menu-line"/>
+            <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+                <ngb-panel title="Категорії">
+                    <ng-template ngbPanelContent>
+                        <input type="checkbox" name="choose" class="choosing"
+                               (click)="changeData(Hookahs)">
+                        <label for="choose">Кальяни</label>
+                        <br/>
+                        <input type="checkbox" name="choose" class="choosing"
+                               (click)="changeData(Charcoals)">
+                        <label for="choose">Вугілля</label>
+                        <br/>
+                        <input type="checkbox" name="choose" class="choosing"
+                               (click)="changeData(Tobaccos)">
+                        <label for="choose">Табак</label>
+                        <br/>
+                        <input type="checkbox" name="choose" class="choosing"
+                               (click)="changeData(Accessories)">
+                        <label for="choose">Аксесуари</label>
+                    </ng-template>
+                </ngb-panel>
+                <ngb-panel title="Виробник">
+                    <ng-template ngbPanelContent>
+                        <input type="checkbox" name="choose" class="choosing">
+                        <label for="choose">Україна</label>
+                        <br/>
+                        <input type="checkbox" name="choose" class="choosing">
+                        <label for="choose">Китай</label>
+                        <br/>
+                        <input type="checkbox" name="choose" class="choosing">
+                        <label for="choose">Турція</label>
+                        <br/>
+                    </ng-template>
+                </ngb-panel>
+                <ngb-panel title="Ціна">
+                    <ng-template ngbPanelContent>
+                        <input type="checkbox" name="choose" class="choosing">
+                        <label for="choose">Дорогі</label>
+                        <br/>
+                        <input type="checkbox" name="choose" class="choosing">
+                        <label for="choose">Дешеві</label>
+                    </ng-template>
+                </ngb-panel>
+            </ngb-accordion>
             <button class="btn btn-primary use-filters">Застосувати фільтри
             </button>
         </div>
@@ -71,8 +80,9 @@
             <div class="col-md-3 item" *ngFor="let item of Items">
                 <a><img src="assets/images/inventory-page/hookah-pic.png"
                         class="hookah-pic"></a>
-                <a href="./item-page"><p class="item-name" href="#">{{item.name}}</p></a>
-                <div class="row description">
+                <a href="./item-page"><p class="item-name"
+                                         href="#">{{item.name}}</p></a>
+                <div class="description">
                     <div class="price">
                         <p class="number">{{item.price}}$</p>
                         <p class="availability">В наявності</p>
