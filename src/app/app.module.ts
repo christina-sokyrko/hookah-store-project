@@ -8,6 +8,7 @@ import {CoreModule} from './core/core.module';
 import {InventoryPageComponent} from './shop/components/inventory-page/inventory-page.component';
 import {ItemPageComponent} from './shop/components/item-page/item-page.component';
 import {HttpClientModule} from '@angular/common/http';
+import { OrderPageComponent } from './shop/components/order-page/order-page.component';
 
 
 
@@ -15,7 +16,8 @@ import {HttpClientModule} from '@angular/common/http';
   declarations: [
     AppComponent,
     InventoryPageComponent,
-    ItemPageComponent
+    ItemPageComponent,
+    OrderPageComponent
   ],
   imports: [
     BrowserModule,
