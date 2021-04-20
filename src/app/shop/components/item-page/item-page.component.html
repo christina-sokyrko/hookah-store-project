@@ -1,11 +1,22 @@
+<div class="main-main-wrapper">
 <div class="main-wrapper">
   <section class = "path">
     <div class = "row left-small">
+      <div class = "cell">
         <a href='/'><img src = "assets/images/inventory-page/combined-shape.svg" class="home-icon"/></a>
+      </div> 
+      <div class = "cell">
         <p class = "arrow"> > </p>
+      </div>  
+      <div class = "cell">
         <p class = "calians"> Кальяни </p>
+       </div> 
+      <div class = "cell">  
         <p class = "arrow"> > </p>
+      </div>  
+      <div class = "cell">
         <p class = "calian-name">Hartley Brown & Matte Black</p>
+      </div> 
     </div>
   </section>
   <section class = "item-info">
@@ -14,6 +25,7 @@
         <img src="assets/images/item-page/hookah-pic.png" class="big"/>
       </div>
       <div class="row small-pics">
+        
         <img src="assets/images/item-page/hookah-pic.png" class="small"/>
         <img src="assets/images/item-page/hookah-pic.png" class="small"/>
         <img src="assets/images/item-page/hookah-pic.png" class="small"/>
@@ -32,8 +44,20 @@
         </div>
         <div class="row item-buttons">
           <button class="btn btn-primary buy">Придбати</button>
-          <button class="btn btn-dark x-number">x1 <img src="assets/images/item-page/arrow-down.svg" class="arrow-down"/></button>
-        </div>
+          <div class="btn-group" dropdown>
+            <button id="button-animated" dropdownToggle type="button" class="btn btn-primary dropdown-toggle x-number"
+                    aria-controls="dropdown-animated">
+                    x1 <img src="assets/images/item-page/arrow-down.svg" class="arrow-down"/> <span class="caret"></span>
+            </button>
+            <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu"
+                role="menu" aria-labelledby="button-animated">
+              <li role="menuitem"><a class="dropdown-item" href="#">x2</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">x3</a>
+              </li>
+              <li role="menuitem"><a class="dropdown-item" href="#">x4</a></li>
+            </ul>
+          </div>
+      </div>
     </div>
   </section>
   <section class="advices">
@@ -76,4 +100,5 @@
       </div>
     </div>
     </section>
+</div>
 </div>
