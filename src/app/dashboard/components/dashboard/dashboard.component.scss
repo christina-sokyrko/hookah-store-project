@@ -1,6 +1,9 @@
 //.main-banner {
   //background: -webkit-image-set(url('src/assets/images/group-9_2021-04-08/group-9.jpg') 1x, url('src/assets/images/group-9_2021-04-08/group-9@2x.jpg') 2x, url('src/assets/images/group-9_2021-04-08/group-9@3x.jpg') 3x);
 //}
+.main-wrapper {
+  min-height: calc(100vh - 80px);
+}
 .carousel-cont {
   width: 100%;
   max-height: 100%;

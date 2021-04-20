@@ -5,6 +5,7 @@ import {InventoryPageComponent} from './components/inventory-page/inventory-page
 import {ItemPageComponent} from './components/item-page/item-page.component';
 import { OrderPageComponent } from './components/order-page/order-page.component';
 
+
 const routes: Routes = [
   { path: 'inventory', pathMatch: 'full', component: InventoryPageComponent },
   { path: 'item-page', pathMatch: 'full', component: ItemPageComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
     imports: [
         CommonModule,
         RouterModule.forChild(routes),
+        
     ]
 })
 export class ShopModule {

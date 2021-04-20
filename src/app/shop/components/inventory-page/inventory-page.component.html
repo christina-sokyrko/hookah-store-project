@@ -2,9 +2,15 @@
     <section class="navbar">
         <div class="navbar-left">
             <div class="row left-small">
-                <a href="/"><img src="assets/images/inventory-page/combined-shape.svg" class="home-icon"></a>
-                <p class="arrow"> > </p>
+                <div class ="cell">
+                     <a href="/"><img src="assets/images/inventory-page/combined-shape.svg" class="home-icon"></a>
+                </div>
+                <div class ="cell">
+                    <p class="arrow"> > </p>
+                </div>
+                <div class ="cell">
                 <p class="calians"> Кальяни </p>
+                </div>
             </div>
             <div class="row left-big">
                 <p class="calians-2"> Кальяни </p>
@@ -78,9 +84,9 @@
         </div>
         <div class="row items">
             <div class="col-md-3 item" *ngFor="let item of Items">
-                <a><img src="assets/images/inventory-page/hookah-pic.png"
+                <a href="/item-page"><img src="assets/images/inventory-page/hookah-pic.png"
                         class="hookah-pic"></a>
-                <a href="./item-page"><p class="item-name"
+                <a href="/item-page"><p class="item-name"
                                          href="#">{{item.name}}</p></a>
                 <div class="description">
                     <div class="price">

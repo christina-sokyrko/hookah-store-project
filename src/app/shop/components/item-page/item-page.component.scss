@@ -1,5 +1,9 @@
+.main-main-wrapper {
+  min-height: calc(100vh - 80px);
+}
 .main-wrapper {
  margin-top: 63px;
+ min-height: calc(100vh - 80px);
 }
 .path {
   height: 70px;
@@ -12,20 +16,20 @@
 .left-small {
   width: 300px;
   color: #d8d8d8;
-  display: flex;
+  display: table;
   justify-content: space-around;
 
 }
-.home-icon {
-  margin-top: 15px;
+.cell {
+  display: table-cell;
+  vertical-align: baseline;
 }
 .arrow {
   font-size: 20px;
-  margin-top: 7px;
-}
+} 
 .calians {
   font-size: 12px;
-  margin-top: 15px;
+  
 }
 .calian-name {
   font-size: 12px;
