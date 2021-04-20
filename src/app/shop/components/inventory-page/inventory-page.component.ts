@@ -9,33 +9,39 @@ import {Subject} from 'rxjs';
 })
 export class InventoryPageComponent implements OnInit, OnDestroy {
     public inventoryDestroyed$: Subject<void> = new Subject<void>();
-    Tobaccos;
-    Hookahs;
-    Charcoals;
-    Accessories;
-    Items;
+    tobaccos;
+    hookahs;
+    charcoals;
+    accessories;
+    items;
+    isContentOpen = false;
+    isMenuCollapsed = false;
 
     constructor(
-        public inventoryService: InventoryService
-    ) {
+        public inventoryService: InventoryService) {
+    }
+
+    toggleAccordion(event: any) {
+        console.log(event);
+        this.isContentOpen = event;
     }
 
     changeData(val): void {
-        this.Items = val;
+        this.items = val;
     }
 
     ngOnInit(): void {
         this.inventoryService.getAllTobaccos().subscribe(tobaccos => {
-            this.Tobaccos = tobaccos;
+            this.tobaccos = tobaccos;
         });
         this.inventoryService.getAllCharcoals().subscribe(charcoals => {
-            this.Charcoals = charcoals;
+            this.charcoals = charcoals;
         });
         this.inventoryService.getAllHookahs().subscribe(hookahs => {
-            this.Hookahs = hookahs;
+            this.hookahs = hookahs;
         });
         this.inventoryService.getAllAccessories().subscribe(accessories => {
-            this.Accessories = accessories;
+            this.accessories = accessories;
         });
     }
 

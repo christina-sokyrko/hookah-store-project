@@ -10,7 +10,8 @@ import {ItemPageComponent} from './shop/components/item-page/item-page.component
 import {HttpClientModule} from '@angular/common/http';
 import { OrderPageComponent } from './shop/components/order-page/order-page.component';
 
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {AccordionModule} from 'ngx-bootstrap/accordion';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -20,14 +21,15 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     ItemPageComponent,
     OrderPageComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    CoreModule,
-    HttpClientModule,
-    NgbModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        CoreModule,
+        HttpClientModule,
+        AccordionModule,
+        NgbModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
