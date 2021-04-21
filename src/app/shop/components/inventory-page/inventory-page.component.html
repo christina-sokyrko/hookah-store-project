@@ -109,9 +109,9 @@
         <div class="row items">
             <div class="card col-md-3 m-2 item" *ngFor="let item of items">
                 <img src="assets/images/inventory-page/hookah-pic.png"
-                     class="card-img-top">
+                     class="card-img-top" routerLink="item-page">
                 <div class="card-body">
-                    <a href="./item-page"><p
+                    <a routerLink="item-page"><p
                             class="item-name">{{item.name}}</p>
                     </a>
                     <div class="description">
