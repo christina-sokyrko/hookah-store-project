@@ -25,13 +25,20 @@
         <img src="assets/images/item-page/hookah-pic.png" class="big"/>
       </div>
       <div class="row small-pics">
+        <carousel [itemsPerSlide]="itemsPerSlide"
+          [singleSlideOffset]="singleSlideOffset"
+          [startFromIndex]="6"
+          [interval]="false">
+          <slide *ngFor="let slide of slides; let index=index">
+          <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">
+          <div class="carousel-caption">
+          
+         </div>
+          </slide>
+        </carousel>
         
-        <img src="assets/images/item-page/hookah-pic.png" class="small"/>
-        <img src="assets/images/item-page/hookah-pic.png" class="small"/>
-        <img src="assets/images/item-page/hookah-pic.png" class="small"/>
-        <img src="assets/images/item-page/hookah-pic.png" class="small"/>
-        <img src="assets/images/item-page/hookah-pic.png" class="small"/>
-        <img src="assets/images/item-page/hookah-pic.png" class="small"/>
+        
+        
       </div>
     </div>
     <div class="item-description">
@@ -47,7 +54,7 @@
           <div class="btn-group" dropdown>
             <button id="button-animated" dropdownToggle type="button" class="btn btn-primary dropdown-toggle x-number"
                     aria-controls="dropdown-animated">
-                    x1 <img src="assets/images/item-page/arrow-down.svg" class="arrow-down"/> <span class="caret"></span>
+                    x1 <span class="caret"></span>
             </button>
             <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu"
                 role="menu" aria-labelledby="button-animated">
