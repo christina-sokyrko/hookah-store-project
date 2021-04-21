@@ -1,24 +1,21 @@
-<div class="main-wrapper">
-    <nav class="navbar navbar-expand-sm navbar-dark">
-
-        <div class="navbar-left">
-            <div class="row left-small">
-                <a href="/"><img
-                        src="assets/images/inventory-page/combined-shape.svg"
-                        class="home-icon"></a>
-                <span class="arrow"> > </span>
-                <span class="calians"> Кальяни </span>
-            </div>
-        </div>
-        <button class="btn-secondary navbar-toggler"
-                (click)="isMenuCollapsed = !isMenuCollapsed">
-            ...
-        </button>
-
-        <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse"
-             style="flex-flow: row-reverse">
-            <div [ngbCollapse]="isMenuCollapsed"
-                 class="collapse-button row navbar-buttons">
+<nav class="navbar navbar-expand-md container navbar-dark">
+    <div class="row left-small">
+        <a href="/"><img src="assets/images/inventory-page/combined-shape.svg"
+                         class="home-icon"></a>
+        <span class="arrow"> > </span>
+        <span class="calians"> Кальяни </span>
+    </div>
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#inventoryNavBar"
+            aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="inventoryNavBar"
+         style="flex-flow: row-reverse;">
+        <div style="flex-flow: row-reverse; display: flex">
+            <div class="navbar-buttons">
                 <button type="button" name="button"
                         class="btn btn-primary top-btn">
                     <img src="assets/images/inventory-page/burger.svg"
@@ -33,16 +30,18 @@
                 </button>
             </div>
         </div>
-    </nav>
-    <!--TODO:implement chips and tags-->
-    <!--    <div class="row left-big">-->
-    <!--        <p class="calians-2"> Кальяни </p>-->
-    <!--        <p class="showed"> Показано 20 товарів-->
-    <!--            <button type="button" name="button" class="criss-cross"><img-->
-    <!--                    src="assets/images/inventory-page/combined-shape-2.svg">-->
-    <!--            </button>-->
-    <!--        </p>-->
-    <!--    </div>-->
+    </div>
+</nav>
+
+<!--        <div class="row left-big">-->
+<!--            <p class="calians-2"> Кальяни </p>-->
+<!--            <p class="showed"> Показано 20 товарів-->
+<!--                <button type="button" name="button" class="criss-cross"><img-->
+<!--                        src="assets/images/inventory-page/combined-shape-2.svg">-->
+<!--                </button>-->
+<!--            </p>-->
+<!--        </div>-->
+<div class="container-lg">
     <section class="inventory">
         <div class="side-bar d-none d-md-block d-lg-block">
             <accordion [isAnimated]="true">
@@ -110,10 +109,10 @@
         </div>
         <div class="row items">
             <div class="card col-md-3 m-2 item" *ngFor="let item of items">
-                <a href="/item-page"><img src="assets/images/inventory-page/hookah-pic.png"
-                     class="card-img-top"></a>
+                <img src="assets/images/inventory-page/hookah-pic.png"
+                     class="card-img-top" routerLink="item-page">
                 <div class="card-body">
-                    <a href="./item-page"><p
+                    <a routerLink="item-page"><p
                             class="item-name">{{item.name}}</p>
                     </a>
                     <div class="description">

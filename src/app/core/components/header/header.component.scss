@@ -21,22 +21,27 @@
     padding: 11px 24px;
   }
 }
+
 .actions {
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-    margin-bottom: -8px;
-    margin-top: -8px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: -8px;
+  margin-top: -8px;
 }
+
 .shopping-cart-icon {
   width: 20px;
   height: 19px;
   margin: 23px 24px 21px;
   object-fit: contain;
 }
+
 .user {
   border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
   margin-bottom: -8px;
   margin-top: -8px;
 }
+
 .user-icon {
   width: 20px;
   height: 19px;

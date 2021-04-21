@@ -8,21 +8,20 @@ import {CoreModule} from './core/core.module';
 import {InventoryPageComponent} from './shop/components/inventory-page/inventory-page.component';
 import {ItemPageComponent} from './shop/components/item-page/item-page.component';
 import {HttpClientModule} from '@angular/common/http';
-import { OrderPageComponent } from './shop/components/order-page/order-page.component';
+import {OrderPageComponent} from './shop/components/order-page/order-page.component';
 
 import {AccordionModule} from 'ngx-bootstrap/accordion';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
+import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
+import {CarouselModule} from 'ngx-bootstrap/carousel';
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    InventoryPageComponent,
-    ItemPageComponent,
-    OrderPageComponent
-  ],
+    declarations: [
+        AppComponent,
+        InventoryPageComponent,
+        ItemPageComponent,
+        OrderPageComponent
+    ],
     imports: [
         BrowserModule,
         AppRoutingModule,
@@ -30,13 +29,12 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
         CoreModule,
         HttpClientModule,
         AccordionModule,
-        NgbModule,
         BrowserAnimationsModule,
         BsDropdownModule.forRoot(),
         CarouselModule.forRoot()
     ],
-  providers: [],
-  bootstrap: [AppComponent]
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }
