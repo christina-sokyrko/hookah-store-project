@@ -31,7 +31,7 @@ import {CarouselModule} from 'ngx-bootstrap/carousel';
         AccordionModule,
         BrowserAnimationsModule,
         BsDropdownModule.forRoot(),
-        CarouselModule.forRoot()
+        CarouselModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

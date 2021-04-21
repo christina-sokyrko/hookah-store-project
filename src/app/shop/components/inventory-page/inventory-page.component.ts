@@ -15,7 +15,6 @@ export class InventoryPageComponent implements OnInit, OnDestroy {
     accessories;
     items;
     isContentOpen = false;
-    isMenuCollapsed = false;
 
     constructor(
         public inventoryService: InventoryService) {
