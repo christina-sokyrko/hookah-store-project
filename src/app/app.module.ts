@@ -8,19 +8,18 @@ import {CoreModule} from './core/core.module';
 import {InventoryPageComponent} from './shop/components/inventory-page/inventory-page.component';
 import {ItemPageComponent} from './shop/components/item-page/item-page.component';
 import {HttpClientModule} from '@angular/common/http';
-import { OrderPageComponent } from './shop/components/order-page/order-page.component';
+import {OrderPageComponent} from './shop/components/order-page/order-page.component';
 
 import {AccordionModule} from 'ngx-bootstrap/accordion';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    InventoryPageComponent,
-    ItemPageComponent,
-    OrderPageComponent
-  ],
+    declarations: [
+        AppComponent,
+        InventoryPageComponent,
+        ItemPageComponent,
+        OrderPageComponent
+    ],
     imports: [
         BrowserModule,
         AppRoutingModule,
@@ -28,10 +27,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
         CoreModule,
         HttpClientModule,
         AccordionModule,
-        NgbModule,
     ],
-  providers: [],
-  bootstrap: [AppComponent]
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }
