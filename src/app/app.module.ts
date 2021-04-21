@@ -12,7 +12,9 @@ import { OrderPageComponent } from './shop/components/order-page/order-page.comp
 
 import {AccordionModule} from 'ngx-bootstrap/accordion';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
         HttpClientModule,
         AccordionModule,
         NgbModule,
+        BrowserAnimationsModule,
+        BsDropdownModule.forRoot(),
+        CarouselModule.forRoot()
     ],
   providers: [],
   bootstrap: [AppComponent]
