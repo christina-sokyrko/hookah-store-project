@@ -24,6 +24,8 @@
     "bootstrap-icons": "^1.4.1",
     "ngx-bootstrap": "^6.2.0",
     "ngx-owl-carousel-o": "^4.0.0",
+    "ngx-select-dropdown": "^2.0.0",
+    "ngx-select-ex": "^6.0.2",
     "rxjs": "~6.5.4",
     "script-loader": "^0.7.2",
     "tslib": "^1.10.0",

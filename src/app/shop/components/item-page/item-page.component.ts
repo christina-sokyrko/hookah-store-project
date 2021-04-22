@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 
 @Component({
@@ -22,13 +23,18 @@ export class ItemPageComponent implements OnInit {
         {image: 'assets/images/item-page/hookah-2.png'},
         {image: 'assets/images/item-page/hookah-3.png'}
     ];
+    
 
     switchSlide(i) {
         this.activeSlide = i;
     }
 
-    ngOnInit(): void {
-    }
+   
+
+
+    ngOnInit(): void { 
+
+}
 
 }
 

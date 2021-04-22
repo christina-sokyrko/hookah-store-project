@@ -60,24 +60,16 @@
                 </div>
                 <div class="row item-buttons">
                     <button class="btn btn-primary buy">Придбати</button>
-                    <div class="btn-group" dropdown>
-                        <button id="button-animated" dropdownToggle
-                                type="button"
-                                class="btn btn-primary dropdown-toggle x-number"
-                                aria-controls="dropdown-animated">
-                            x1 <span class="caret"></span>
-                        </button>
-                        <ul id="dropdown-animated" *dropdownMenu
-                            class="dropdown-menu"
-                            role="menu" aria-labelledby="button-animated">
-                            <li role="menuitem"><a class="dropdown-item"
-                                                   href="#">x2</a></li>
-                            <li role="menuitem"><a class="dropdown-item"
-                                                   href="#">x3</a>
-                            </li>
-                            <li role="menuitem"><a class="dropdown-item"
-                                                   href="#">x4</a></li>
-                        </ul>
+                    <div class="dropdown">
+                      <div class="form-group">   
+                          <select id="quantity" name="quantity" 
+                          class="form-control" (click)="saveQuantity(value)">
+                          <option value="1">x1</option>
+                          <option value="2">x2</option>
+                          <option value="3">x3</option>
+                          <option value="4">x4</option>
+                          </select>
+                      </div>  
                     </div>
                 </div>
             </div>
