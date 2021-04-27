@@ -34,6 +34,9 @@ import {CarouselModule} from 'ngx-bootstrap/carousel';
         CarouselModule,
     ],
     providers: [],
+    exports: [
+        InventoryPageComponent
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
