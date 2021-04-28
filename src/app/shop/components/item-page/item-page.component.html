@@ -60,25 +60,33 @@
                 </div>
                 <div class="row item-buttons">
                     <button class="btn btn-primary buy">Придбати</button>
-                    <div class="btn-group" dropdown>
-                        <button id="button-animated" dropdownToggle
-                                type="button"
-                                class="btn btn-primary dropdown-toggle x-number"
-                                aria-controls="dropdown-animated">
-                            x1 <span class="caret"></span>
-                        </button>
-                        <ul id="dropdown-animated" *dropdownMenu
-                            class="dropdown-menu"
-                            role="menu" aria-labelledby="button-animated">
-                            <li role="menuitem"><a class="dropdown-item"
-                                                   href="#">x2</a></li>
-                            <li role="menuitem"><a class="dropdown-item"
-                                                   href="#">x3</a>
-                            </li>
-                            <li role="menuitem"><a class="dropdown-item"
-                                                   href="#">x4</a></li>
-                        </ul>
-                    </div>
+
+                    <ngx-select [formControl]="selectControl"
+                        [allowClear]="true"
+                        [items]="selectItems"
+                        optionValueField="optionId"
+                        optionTextField="optionTitle"
+                        placeholder="Select...">
+                    </ngx-select>
+<!--                    <div class="btn-group" dropdown>-->
+<!--                        <button id="button-animated" dropdownToggle-->
+<!--                                type="button"-->
+<!--                                class="btn btn-primary dropdown-toggle x-number"-->
+<!--                                aria-controls="dropdown-animated">-->
+<!--                            x1 <span class="caret"></span>-->
+<!--                        </button>-->
+<!--                        <ul id="dropdown-animated" *dropdownMenu-->
+<!--                            class="dropdown-menu"-->
+<!--                            role="menu" aria-labelledby="button-animated">-->
+<!--                            <li role="menuitem"><a class="dropdown-item"-->
+<!--                                                   href="#">x2</a></li>-->
+<!--                            <li role="menuitem"><a class="dropdown-item"-->
+<!--                                                   href="#">x3</a>-->
+<!--                            </li>-->
+<!--                            <li role="menuitem"><a class="dropdown-item"-->
+<!--                                                   href="#">x4</a></li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
                 </div>
             </div>
         </section>
