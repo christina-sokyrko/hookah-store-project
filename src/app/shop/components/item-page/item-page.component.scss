@@ -65,12 +65,12 @@
   flex-wrap: nowrap;
 }
 
-.small-pics::-webkit-scrollbar {
+.indicators::-webkit-scrollbar {
   height: 5px;
   background-color: #05080f;
 }
 
-.small-pics::-webkit-scrollbar-thumb {
+.indicators::-webkit-scrollbar-thumb {
   height: 5px;
   background-color: white;
   opacity: 0.6;

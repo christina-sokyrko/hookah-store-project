@@ -21,12 +21,12 @@
                 </div>
             </div>
         </section>
-        <section class="item-info">
-            <div class="item-pics">
+        <section class="row item-info">
+            <div class="col-md-6 item-pics">
                 <div class="big-pic">
                     <carousel [showIndicators]="false" [isAnimated]="true"
                               [(activeSlide)]="activeSlide">
-                        <slide *ngFor="let slide of slides">
+                        <slide  class="slider" *ngFor="let slide of slides">
                             <img [src]="slide.image" alt="image slide"
                                  style="display: block; width: 100%;">
                         </slide>
@@ -42,7 +42,7 @@
                     </button>
                 </div>
             </div>
-            <div class="item-description">
+            <div class="col-md-6 item-description">
                 <div class="row item-title">
                     <p class="item-name">Hartley Brown & Matte Black</p>
                     <p class="item-price">300$</p>
