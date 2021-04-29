@@ -18,6 +18,14 @@ footer {
     color: #ffffff;
     text-decoration: none;
   }
+
+}
+@media screen and (max-width: 768px) {
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: -25px;
+  }
 }
 
 .footer-info {

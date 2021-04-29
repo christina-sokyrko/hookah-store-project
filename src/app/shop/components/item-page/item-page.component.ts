@@ -27,7 +27,13 @@ export class ItemPageComponent implements OnInit {
         this.activeSlide = i;
     }
 
-    ngOnInit(): void {
+    ngOnInit(): {
+
+    }
+    
+    
+    saveQuantity(qForm: NgForm): void {
+        console.log(qForm.value);
     }
 
 }
