@@ -71,7 +71,8 @@
                                    (change)="changeSubtotal(item ,i)"
                                    min="1" type="text" class="form-control"
                                    style="max-width: 40px; text-align: center; height: 30px; padding: unset;background-clip: unset"/>
-                            <button class="btn btn-outline-secondary"
+                            <button [disabled]="item.qtyTotal <= 1"
+                                    class="btn btn-outline-secondary"
                                     style="border-radius: 0 10px 10px 0; height: 30px; padding: revert;"
                                     (click)="decrease(item, i)">-
                             </button>
