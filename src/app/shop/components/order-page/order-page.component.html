@@ -44,11 +44,12 @@
             </div>
         </div>
         <div class="col-md-6 description">
-            <div>Загальна ціна:
-                <span class="font-weight-bold  ">{{total | currency}}</span>
+            <div style="display: flex; flex-flow: row">
+                <p style="font-size: 24px">Загальна
+                    ціна: {{total}} ₴</p>
                 <hr>
-                <button class="btn btn-primary  " (click)="clearCart(items)">
-                    Clear Items
+                <button class="btn btn-outline-secondary" (click)="clearCart()">
+                    Очистити корзину
                 </button>
             </div>
             <div class="item" *ngFor="let item of items; let i = index">
@@ -57,19 +58,34 @@
                          class="pic"/>
                 </div>
                 <div class="left-block">
-                    <p>{{item.name}}</p>
-                    <input [(ngModel)]="item.qtyTotal"
-                           [ngModelOptions]="{standalone: true}"
-                           min="1" type="number"
-                           value="{{ item.qtyTotal }}"
-                           class="form-control"
-                           (change)="changeSubtotal(item ,i)"/>
-                    <p>Ціна: {{item.price}} грн.</p>
-                    <div #subTotalWrap>{{ item.price | currency }}</div>
+                    <p class="cut-text">{{item.name}}</p>
+                    <div style="display: flex; flex-flow: row">
+                        <div class="input-group"
+                             style="margin-left: 20px; max-width: 150px;">
+                            <button class="btn btn-outline-secondary"
+                                    style="border-radius: 10px 0 0 10px; height: 30px; padding: revert;"
+                                    (click)="increase(item, i)">+
+                            </button>
+                            <input [(ngModel)]="item.qtyTotal"
+                                   value="{{ item.qtyTotal }}"
+                                   (change)="changeSubtotal(item ,i)"
+                                   min="1" type="text" class="form-control"
+                                   style="max-width: 40px; text-align: center; height: 30px; padding: unset;background-clip: unset"/>
+                            <button class="btn btn-outline-secondary"
+                                    style="border-radius: 0 10px 10px 0; height: 30px; padding: revert;"
+                                    (click)="decrease(item, i)">-
+                            </button>
+                        </div>
+                        <div style="display: flex; flex-flow: row">
+                            <p>Ціна:</p>
+                            <p #subTotalWrap>{{ item.price }}₴</p>
+                        </div>
 
+                    </div>
                 </div>
                 <div class="item-btn">
-                    <button (click)="removeFromCart(item)">
+                    <button class="btn btn-outline-secondary"
+                            (click)="removeFromCart(item)">
                         <i class="bi bi-trash-fill" style="font-size: 20px"></i>
                     </button>
                 </div>

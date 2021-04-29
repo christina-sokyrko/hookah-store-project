@@ -45,7 +45,7 @@
 }
 
 .pic {
-  width: 200px;
+  width: 130px;
 
 }
 
@@ -66,15 +66,23 @@
   display: flex;
   flex-flow: row;
   margin: 5px;
-  background-color: #1c6476;
+  padding: 5px;
+  border: solid 1px rgb(255 255 255 / 10%);
+  border-radius: 10px;
 }
 
 .left-block {
   flex-direction: column;
-  margin-left: 5px;
-  margin-top: 5px;
+  padding: 5px;
 }
 
 .item-btn {
   margin-left: auto;
+}
+
+.cut-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 300px;
+  white-space: nowrap;
 }
