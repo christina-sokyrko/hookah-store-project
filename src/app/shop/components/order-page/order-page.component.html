@@ -1,43 +1,94 @@
 <div class="main-main-wrapper">
-<div class="row main-wrapper">
-  <div class="col-md-6 order-form">
-  <div class="form-title">
-    <p>Крок 1: Введіть інформацію про себе</p>
-  </div>
-  <div class="row inputs">
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">Ім'я</span>
-      </div>
-      <input type="text" class="form-control" placeholder="Введіть Ваше ім'я" aria-label="Username" aria-describedby="basic-addon1">
+    <div class="row main-wrapper">
+        <div class="col-md-6 order-form">
+            <div class="form-title">
+                <p>Крок 1: Введіть інформацію про себе</p>
+            </div>
+            <div class="row inputs">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"
+                              id="basic-addon1">Ім'я</span>
+                    </div>
+                    <input type="text" class="form-control"
+                           placeholder="Введіть Ваше ім'я" aria-label="Username"
+                           aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"
+                              id="basic-addon2">Телефон</span>
+                    </div>
+                    <input type="text" class="form-control"
+                           placeholder="Введіть контактний номер телефону"
+                           aria-label="Username"
+                           aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"
+                              id="basic-addon3">E-mail</span>
+                    </div>
+                    <input type="text" class="form-control"
+                           placeholder="Введіть Вашу електронну пошту"
+                           aria-label="Username"
+                           aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <div class="buttons">
+                <a [routerLink]="'item-page'">
+                    <button class="btn dark-btn left-btn">Назад</button>
+                </a>
+                <button class="btn primary-btn right-btn">Продовжити</button>
+            </div>
+        </div>
+        <div class="col-md-6 description">
+            <div>Загальна ціна:
+                <span class="font-weight-bold  ">{{total | currency}}</span>
+                <hr>
+                <button class="btn btn-primary  " (click)="clearCart(items)">
+                    Clear Items
+                </button>
+            </div>
+            <div class="item" *ngFor="let item of items; let i = index">
+                <div class="item-image">
+                    <img src="assets/images/item-page/hookah-pic.png"
+                         class="pic"/>
+                </div>
+                <div class="left-block">
+                    <p>{{item.name}}</p>
+                    <input [(ngModel)]="item.qtyTotal"
+                           [ngModelOptions]="{standalone: true}"
+                           min="1" type="number"
+                           value="{{ item.qtyTotal }}"
+                           class="form-control"
+                           (change)="changeSubtotal(item ,i)"/>
+                    <p>Ціна: {{item.price}} грн.</p>
+                    <div #subTotalWrap>{{ item.price | currency }}</div>
+
+                </div>
+                <div class="item-btn">
+                    <button (click)="removeFromCart(item)">
+                        <i class="bi bi-trash-fill" style="font-size: 20px"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <ul>
+
+        </ul>
     </div>
-    
-     <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">Телефон</span>
-      </div>
-      <input type="text" class="form-control" placeholder="Введіть контактний номер телефону" aria-label="Username" aria-describedby="basic-addon1">
-    </div>
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">E-mail</span>
-      </div>
-      <input type="text" class="form-control" placeholder="Введіть Вашу електронну пошту" aria-label="Username" aria-describedby="basic-addon1">
-    </div>
-  </div>
-  <div class="buttons">
-    <a href="/item-page"><button class="btn dark-btn left-btn">Назад</button></a>
-    <button class="btn primary-btn right-btn">Продовжити</button>
-  </div>
-  </div>
-  <div class="col-md-6 description">
-    <div class="pic">
-      <img src="assets/images/item-page/hookah-pic.png" class="big"/>
-    </div>
-    <div class="text">
-      <h4>Hartley Brown & Matte Black</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero sed voluptates blanditiis, aliquid nihil, iste eius temporibus earum itaque est ratione necessitatibus dolores minus ducimus provident ipsa! Aliquid, vero.</p>
-    </div> 
-  </div> 
-  </div>
 </div>
+
+
+<!--<div class="pic">-->
+<!--    -->
+<!--</div>-->
+<!--<div class="text">-->
+<!--    <h4>Hartley Brown & Matte Black</h4>-->
+<!--    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et-->
+<!--        vero sed voluptates blanditiis, aliquid nihil, iste eius-->
+<!--        temporibus earum itaque est ratione necessitatibus dolores-->
+<!--        minus ducimus provident ipsa! Aliquid, vero.</p>-->
+<!--</div>-->

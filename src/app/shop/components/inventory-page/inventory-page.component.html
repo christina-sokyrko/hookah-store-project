@@ -15,20 +15,20 @@
     <div class="collapse navbar-collapse" id="inventoryNavBar"
          style="flex-flow: row-reverse;">
         <div style="flex-flow: row-reverse; display: flex">
-            <div class="navbar-buttons">
-                <button type="button" name="button"
-                        class="btn btn-primary top-btn">
-                    <img src="assets/images/inventory-page/burger.svg"
-                         class="btn-img">
-                    <p>Сортувати</p>
-                </button>
-                <button type="button" name="button"
-                        class="btn btn-primary top-btn">
-                    <img src="assets/images/inventory-page/path.svg"
-                         class="btn-img">
-                    <p>Фільтр</p>
-                </button>
-            </div>
+            <!--            <div class="navbar-buttons">-->
+            <!--                <button type="button" name="button"-->
+            <!--                        class="btn btn-primary top-btn">-->
+            <!--                    <img src="assets/images/inventory-page/burger.svg"-->
+            <!--                         class="btn-img">-->
+            <!--                    <p>Сортувати</p>-->
+            <!--                </button>-->
+            <!--                <button type="button" name="button"-->
+            <!--                        class="btn btn-primary top-btn">-->
+            <!--                    <img src="assets/images/inventory-page/path.svg"-->
+            <!--                         class="btn-img">-->
+            <!--                    <p>Фільтр</p>-->
+            <!--                </button>-->
+            <!--            </div>-->
         </div>
     </div>
 </nav>
@@ -120,7 +120,8 @@
                             <p class="number">{{item.price}}$</p>
                             <p class="availability">В наявності</p>
                         </div>
-                        <button class="shop"><img
+                        <button class="shop"
+                                (click)="addToCart(item)"><img
                                 src="assets/images/inventory-page/rectangle-5.svg"
                                 class="shop-icon"/></button>
                     </div>

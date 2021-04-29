@@ -1,6 +1,7 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
 import {InventoryService} from '../../../services/inventory.service';
 import {Subject} from 'rxjs';
+import {CartService} from '../../../services/cart.service';
 
 @Component({
     selector: 'app-inventory-page',
@@ -15,9 +16,19 @@ export class InventoryPageComponent implements OnInit, OnDestroy {
     accessories;
     items;
     isContentOpen = false;
+    cartItems = [];
 
     constructor(
-        public inventoryService: InventoryService) {
+        public inventoryService: InventoryService,
+        private cartService: CartService) {
+    }
+
+    addToCart(item) {
+        if (!this.cartService.itemInCart(item)) {
+            item.qtyTotal = 1;
+            this.cartService.addToCart(item);
+            this.cartItems = [...this.cartService.getItems()];
+        }
     }
 
     toggleAccordion(event: any) {
