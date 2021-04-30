@@ -8,6 +8,17 @@ import {Component, OnInit} from '@angular/core';
 
 })
 export class ItemPageComponent implements OnInit {
+    
+   // public selectControl = new FormControl();
+
+  //  public selectItems = [
+  //      {optionId: 1, optionTitle: 'option 1'},
+   //     {optionId: 2, optionTitle: 'option 2'},
+   //     {optionId: 3, optionTitle: 'option 3'},
+   //     {optionId: 4, optionTitle: 'option 4'},
+   //     {optionId: 5, optionTitle: 'option 5'},
+   //     ];
+
 
     constructor() {
     }
@@ -32,9 +43,7 @@ export class ItemPageComponent implements OnInit {
     }
     
     
-    saveQuantity(qForm: NgForm): void {
-        console.log(qForm.value);
-    }
+   
 
 }
 

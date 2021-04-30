@@ -61,12 +61,13 @@
                 <div class="row item-buttons">
                     <button class="btn btn-primary buy">Придбати</button>
                    
-                        <select [(ngModel)]="quantity" class="form-control">
-                            <option value="1">x1</option>
-                            <option value="2">x2</option>
-                            <option value="3">x3</option>
-                            <option value="4">x4</option>
-                        </select>
+                    <ngx-select [formControl]="selectControl"
+                         [allowClear]="true"
+                         [items]="selectItems"
+                         optionValueField="optionId"
+                         optionTextField="optionTitle"
+                         placeholder="Select...">
+                    </ngx-select>
                     
                 </div>
             </div>

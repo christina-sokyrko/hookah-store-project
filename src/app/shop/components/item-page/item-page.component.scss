@@ -45,7 +45,7 @@
 }
 
 .item-info {
-  width: 1320px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -64,6 +64,10 @@
   width: 640px;
   display: flex;
   flex-wrap: nowrap;
+}
+.indicators {
+  overflow: scroll;
+  max-width: 100%;
 }
 
 .indicators::-webkit-scrollbar {
@@ -152,6 +156,7 @@ option {
 
 .advices {
   margin-top: 80px;
+  
 }
 
 .a-title {
@@ -160,7 +165,10 @@ option {
   color: white;
   text-align: center;
 }
-
+.advices-items {
+  display: flex;
+  justify-content: center;
+}
 .one-item {
   width: 318px;
   height: 324px;
