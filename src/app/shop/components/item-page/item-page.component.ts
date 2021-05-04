@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {FormControl} from '@angular/forms';
 
 
 @Component({
@@ -9,15 +10,18 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ItemPageComponent implements OnInit {
     
-   // public selectControl = new FormControl();
+    public selectItems = [
+        {value: 1, title: 'x1'},
+        {value: 2, title: 'x2'},
+        {value: 3, title: 'x3'},
+        {value: 4, title: 'x4'},
+        {value: 5, title: 'x5'},
+    
+    ];
+    selectItem(event: any) {
+        console.log(event);
+    }
 
-  //  public selectItems = [
-  //      {optionId: 1, optionTitle: 'option 1'},
-   //     {optionId: 2, optionTitle: 'option 2'},
-   //     {optionId: 3, optionTitle: 'option 3'},
-   //     {optionId: 4, optionTitle: 'option 4'},
-   //     {optionId: 5, optionTitle: 'option 5'},
-   //     ];
 
 
     constructor() {
@@ -38,14 +42,15 @@ export class ItemPageComponent implements OnInit {
         this.activeSlide = i;
     }
 
-    ngOnInit(): {
+    ngOnInit(): void {
+       
 
     }
     
-    
+} 
    
 
-}
+
 
 
 

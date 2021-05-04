@@ -13,7 +13,7 @@ import {OrderPageComponent} from './shop/components/order-page/order-page.compon
 import {AccordionModule} from 'ngx-bootstrap/accordion';
 import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import {CarouselModule} from 'ngx-bootstrap/carousel';
-
+import { NgxSelectModule } from 'ngx-select-ex';
 
 @NgModule({
     declarations: [
@@ -32,6 +32,7 @@ import {CarouselModule} from 'ngx-bootstrap/carousel';
         BrowserAnimationsModule,
         BsDropdownModule.forRoot(),
         CarouselModule,
+        NgxSelectModule
     ],
     providers: [],
     exports: [
