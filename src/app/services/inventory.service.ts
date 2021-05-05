@@ -15,9 +15,15 @@ export class InventoryService {
     getAllTobaccos() {
         return this.http.get(environment.apiBaseUrl + '/tobaccos');
     }
+
+    getByIdTobaccos(id: number) {
+        return this.http.get(environment.apiBaseUrl + `/tobaccos/${id}`);
+    }
+
     getAllHookahs() {
         return this.http.get(environment.apiBaseUrl + '/hookahs');
     }
+
     getAllCharcoals() {
         return this.http.get(environment.apiBaseUrl + '/charcoals');
     }

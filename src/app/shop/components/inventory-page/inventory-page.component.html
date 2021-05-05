@@ -91,7 +91,7 @@
                 <img src="assets/images/inventory-page/hookah-pic.png"
                      class="card-img-top" [routerLink]="'item-page'">
                 <div class="card-body">
-                    <a routerLink="item-page"><p
+                    <a [routerLink]="['item-page', item.id]"><p
                             class="item-name">{{item.name}}</p>
                     </a>
                     <div class="description">

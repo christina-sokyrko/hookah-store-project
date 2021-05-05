@@ -32,7 +32,6 @@ export class InventoryPageComponent implements OnInit, OnDestroy {
     }
 
     toggleAccordion(event: any) {
-        console.log(event);
         this.isContentOpen = event;
     }
 
