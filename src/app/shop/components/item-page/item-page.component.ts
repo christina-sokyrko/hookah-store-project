@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {FormControl} from '@angular/forms';
 
 
 @Component({
@@ -8,6 +9,20 @@ import {Component, OnInit} from '@angular/core';
 
 })
 export class ItemPageComponent implements OnInit {
+    
+    public selectItems = [
+        {value: 1, title: 'x1'},
+        {value: 2, title: 'x2'},
+        {value: 3, title: 'x3'},
+        {value: 4, title: 'x4'},
+        {value: 5, title: 'x5'},
+    
+    ];
+    selectItem(event: any) {
+        console.log(event);
+    }
+
+
 
     constructor() {
     }
@@ -28,9 +43,14 @@ export class ItemPageComponent implements OnInit {
     }
 
     ngOnInit(): void {
-    }
+       
 
-}
+    }
+    
+} 
+   
+
+
 
 
 

@@ -15,6 +15,7 @@ import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import {CarouselModule} from 'ngx-bootstrap/carousel';
 import {FormsModule} from "@angular/forms";
 
+import { NgxSelectModule } from 'ngx-select-ex';
 
 @NgModule({
     declarations: [
@@ -34,6 +35,7 @@ import {FormsModule} from "@angular/forms";
         BsDropdownModule.forRoot(),
         CarouselModule,
         FormsModule,
+        NgxSelectModule
     ],
     providers: [],
     exports: [

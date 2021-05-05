@@ -21,12 +21,12 @@
                 </div>
             </div>
         </section>
-        <section class="item-info">
-            <div class="item-pics">
+        <section class="row item-info">
+            <div class="col-md-6 item-pics">
                 <div class="big-pic">
                     <carousel [showIndicators]="false" [isAnimated]="true"
                               [(activeSlide)]="activeSlide">
-                        <slide *ngFor="let slide of slides">
+                        <slide  class="slider" *ngFor="let slide of slides">
                             <img [src]="slide.image" alt="image slide"
                                  style="display: block; width: 100%;">
                         </slide>
@@ -42,7 +42,7 @@
                     </button>
                 </div>
             </div>
-            <div class="item-description">
+            <div class="col-md-5 item-description">
                 <div class="row item-title">
                     <p class="item-name">Hartley Brown & Matte Black</p>
                     <p class="item-price">300$</p>
@@ -60,25 +60,13 @@
                 </div>
                 <div class="row item-buttons">
                     <button class="btn btn-primary buy">Придбати</button>
-                    <div class="btn-group" dropdown>
-                        <button id="button-animated" dropdownToggle
-                                type="button"
-                                class="btn btn-primary dropdown-toggle x-number"
-                                aria-controls="dropdown-animated">
-                            x1 <span class="caret"></span>
-                        </button>
-                        <ul id="dropdown-animated" *dropdownMenu
-                            class="dropdown-menu"
-                            role="menu" aria-labelledby="button-animated">
-                            <li role="menuitem"><a class="dropdown-item"
-                                                   href="#">x2</a></li>
-                            <li role="menuitem"><a class="dropdown-item"
-                                                   href="#">x3</a>
-                            </li>
-                            <li role="menuitem"><a class="dropdown-item"
-                                                   href="#">x4</a></li>
-                        </ul>
-                    </div>
+                   
+                    <select class="quantity" (change)="selectItem($event.target.value)">
+                        <option *ngFor="let item of selectItems"
+                                value="{{item.value}}">{{item.title}}
+                        </option>
+                    </select>
+                    
                 </div>
             </div>
         </section>
