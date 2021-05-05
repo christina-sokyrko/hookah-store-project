@@ -1,7 +1,8 @@
 footer {
   background-color: #000000;
   height: 80px;
-	width: 100%;
+  width: 100%;
+
   .container {
 
 
@@ -20,6 +21,7 @@ footer {
   }
 
 }
+
 @media screen and (max-width: 768px) {
   .footer-nav {
     display: flex;

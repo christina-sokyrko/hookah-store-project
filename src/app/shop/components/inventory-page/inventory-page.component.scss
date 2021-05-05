@@ -1,4 +1,3 @@
-
 .navbar {
   margin-top: 75px;
 }
@@ -21,47 +20,6 @@
   margin-top: 15px;
 }
 
-.left-big {
-  width: 300px;
-
-  display: flex;
-  justify-content: space-between;
-}
-
-.calians-2 {
-  font-size: 30px;
-  color: white;
-}
-
-.showed {
-  font-size: 14px;
-  color: #aaaebf;
-  margin-top: 12px;
-}
-
-.criss-cross {
-  background-color: #05080f;
-  border: solid #05080f;
-}
-
-.navbar-buttons {
-  width: 355px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.top-btn {
-  width: 170px;
-  height: 40px;
-  background-color: #1e2127;;
-  border: solid #1e2127;
-  display: flex;
-  justify-content: space-around;
-}
-
-.btn-img {
-  margin-top: 5px;
-}
 
 .inventory {
   display: flex;
@@ -79,33 +37,6 @@
   border-radius: 4px;
   background-color: #1e2127;
   font-family: Montserrat;
-}
-
-.menu {
-  font-size: 16px;
-  color: #c9ccdb;
-  margin-left: 12px;
-}
-
-.menu-line {
-  width: 320px;
-  margin: 24px 5px 5px;
-  opacity: 0.1;
-  background-color: #efeff0;
-}
-
-.plus-minus {
-  margin-left: 300px;
-  margin-top: -60px;
-  font-size: 30px;
-  color: #b8bccb;
-  background-color: #1e2127;
-  border: solid #1e2127;
-}
-
-.choosing-category {
-  font-size: 14px;
-  color: #b8bccb;
 }
 
 .choosing {
