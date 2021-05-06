@@ -33,21 +33,35 @@
                             <p *ngIf="!isContentOpen[1]">+</p>
                         </span>
                     </button>
-                    <input type="checkbox" name="choose" class="choosing"
-                           (click)="changeData(hookahs)">
-                    <label for="choose">Кальяни</label>
-                    <br/>
-                    <input type="checkbox" name="choose" class="choosing"
-                           (click)="changeData(charcoals)">
-                    <label for="choose">Вугілля</label>
-                    <br/>
-                    <input type="checkbox" name="choose" class="choosing"
-                           (click)="changeData(tobaccos)">
-                    <label for="choose">Табак</label>
-                    <br/>
-                    <input type="checkbox" name="choose" class="choosing"
-                           (click)="changeData(accessories)">
-                    <label for="choose">Аксесуари</label>
+
+
+                    <div *ngFor="let category of categories">
+                        <input type="checkbox" class="choosing"
+                               [(ngModel)]="isChecked[category.id]"
+                               (change)="checkValue(isChecked[category.id], category.value, category.id)">
+                        <label>{{category.name}}</label>
+                    </div>
+
+
+                    <!--                    <input type="checkbox" name="choose" class="choosing"-->
+                    <!--                           [(ngModel)]="isChecked[0]"-->
+                    <!--                           (change)="checkValue(isChecked[0], hookahs, 0)">-->
+                    <!--                    <label>Кальяни</label>-->
+                    <!--                    <br/>-->
+                    <!--                    <input type="checkbox" name="choose" class="choosing"-->
+                    <!--                           [(ngModel)]="isChecked[1]"-->
+                    <!--                           (change)="checkValue(isChecked[1], charcoals, 1)">-->
+                    <!--                    <label>Вугілля</label>-->
+                    <!--                    <br/>-->
+                    <!--                    <input type="checkbox" name="choose" class="choosing"-->
+                    <!--                           [(ngModel)]="isChecked[2]"-->
+                    <!--                           (change)="checkValue(isChecked[2], tobaccos, 2)">-->
+                    <!--                    <label>Табак</label>-->
+                    <!--                    <br/>-->
+                    <!--                    <input type="checkbox" name="choose" class="choosing"-->
+                    <!--                           [(ngModel)]="isChecked[3]"-->
+                    <!--                           (change)="checkValue(isChecked[3], accessories, 3)">-->
+                    <!--                    <label>Аксесуари</label>-->
                 </accordion-group>
                 <accordion-group (isOpenChange)="toggleAccordion($event, 2)">
                     <button class="btn btn-link btn-block clearfix"
@@ -86,7 +100,7 @@
             <button class="btn btn-primary use-filters">Застосувати фільтри
             </button>
         </div>
-        <div class="row items">
+        <div class="row items" *ngFor="let items of massiv">
             <div class="card col-md-3 m-2 item" *ngFor="let item of items">
                 <img src="assets/images/inventory-page/hookah-pic.png"
                      class="card-img-top" [routerLink]="'item-page'">

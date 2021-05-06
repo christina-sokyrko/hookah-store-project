@@ -17,10 +17,28 @@ export class InventoryPageComponent implements OnInit, OnDestroy {
     items;
     isContentOpen: any = {};
     cartItems = [];
+    massiv = [];
+    isChecked: any = {};
 
     constructor(
         public inventoryService: InventoryService,
         private cartService: CartService) {
+    }
+
+    public categories = [
+        {id: 0, name: 'Табак', value: this.tobaccos},
+        {id: 1, name: 'Кальяни', value: this.hookahs},
+        {id: 2, name: 'Вугілля', value: this.charcoals},
+        {id: 3, name: 'Аксесуари', value: this.accessories},
+    ];
+
+    checkValue(event: any, value, id) {
+        if (event) {
+            this.massiv.push(value);
+        } else {
+            delete this.massiv[id];
+        }
+        console.log(this.massiv);
     }
 
     addToCart(item) {
@@ -33,10 +51,6 @@ export class InventoryPageComponent implements OnInit, OnDestroy {
 
     toggleAccordion(status: any, idAccordion) {
         this.isContentOpen[idAccordion] = status;
-    }
-
-    changeData(val): void {
-        this.items = val;
     }
 
     ngOnInit(): void {
