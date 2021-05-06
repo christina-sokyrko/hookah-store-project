@@ -15,7 +15,7 @@ export class InventoryPageComponent implements OnInit, OnDestroy {
     charcoals;
     accessories;
     items;
-    isContentOpen = false;
+    isContentOpen: any = {};
     cartItems = [];
 
     constructor(
@@ -31,9 +31,8 @@ export class InventoryPageComponent implements OnInit, OnDestroy {
         }
     }
 
-    toggleAccordion(event: any) {
-        console.log(event);
-        this.isContentOpen = event;
+    toggleAccordion(status: any, idAccordion) {
+        this.isContentOpen[idAccordion] = status;
     }
 
     changeData(val): void {

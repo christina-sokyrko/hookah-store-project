@@ -24,13 +24,13 @@
     <section class="inventory">
         <div class="side-bar d-none d-md-block d-lg-block">
             <accordion [isAnimated]="true">
-                <accordion-group (isOpenChange)="toggleAccordion($event)">
+                <accordion-group (isOpenChange)="toggleAccordion($event, 1)">
                     <button class="btn btn-link btn-block clearfix"
                             accordion-heading type="button">
                         <div class="pull-left float-left">Категорії</div>
                         <span class=" float-right pull-right">
-                            <p *ngIf="isContentOpen">-</p>
-                            <p *ngIf="!isContentOpen">+</p>
+                            <p *ngIf="isContentOpen[1]">-</p>
+                            <p *ngIf="!isContentOpen[1]">+</p>
                         </span>
                     </button>
                     <input type="checkbox" name="choose" class="choosing"
@@ -49,13 +49,13 @@
                            (click)="changeData(accessories)">
                     <label for="choose">Аксесуари</label>
                 </accordion-group>
-                <accordion-group (isOpenChange)="toggleAccordion($event)">
+                <accordion-group (isOpenChange)="toggleAccordion($event, 2)">
                     <button class="btn btn-link btn-block clearfix"
                             accordion-heading type="button">
                         <div class="pull-left float-left">Виробник</div>
                         <span class="float-right pull-right">
-                            <p *ngIf="isContentOpen">-</p>
-                            <p *ngIf="!isContentOpen">+</p>
+                            <p *ngIf="isContentOpen[2]">-</p>
+                            <p *ngIf="!isContentOpen[2]">+</p>
                         </span>
                     </button>
                     <input type="checkbox" name="choose" class="choosing">
@@ -67,13 +67,13 @@
                     <input type="checkbox" name="choose" class="choosing">
                     <label for="choose">Турція</label>
                     <br/></accordion-group>
-                <accordion-group (isOpenChange)="toggleAccordion($event)">
+                <accordion-group (isOpenChange)="toggleAccordion($event, 3)">
                     <button class="btn btn-link btn-block clearfix"
                             accordion-heading type="button">
                         <div class="pull-left float-left">Ціна</div>
                         <span class="float-right pull-right">
-                            <p *ngIf="isContentOpen">-</p>
-                            <p *ngIf="!isContentOpen">+</p>
+                            <p *ngIf="isContentOpen[3]">-</p>
+                            <p *ngIf="!isContentOpen[3]">+</p>
                         </span>
                     </button>
                     <input type="checkbox" name="choose" class="choosing">
