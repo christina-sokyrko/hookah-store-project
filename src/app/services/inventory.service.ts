@@ -12,18 +12,20 @@ export class InventoryService {
     ) {
     }
 
-    getAllTobaccos() {
-        return this.http.get(environment.apiBaseUrl + '/tobaccos');
-    }
-    getAllHookahs() {
-        return this.http.get(environment.apiBaseUrl + '/hookahs');
-    }
-    getAllCharcoals() {
-        return this.http.get(environment.apiBaseUrl + '/charcoals');
+    getAllCategory() {
+        return this.http.get(environment.apiBaseUrl + '/categories');
     }
 
-    getAllAccessories() {
-        return this.http.get(environment.apiBaseUrl + '/accessories');
+    getAllSubCategory() {
+        return this.http.get(environment.apiBaseUrl + '/sub-categories');
+    }
+
+    getAllInventory() {
+        return this.http.get(environment.apiBaseUrl + '/products?_limit=300');
+    }
+
+    getFilterInventory(id: number) {
+        return this.http.get(environment.apiBaseUrl + `/products?category=${id}`);
     }
 }
 
