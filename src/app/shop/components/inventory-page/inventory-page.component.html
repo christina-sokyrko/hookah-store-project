@@ -24,38 +24,29 @@
     <section class="inventory">
         <div class="side-bar d-none d-md-block d-lg-block">
             <accordion [isAnimated]="true">
-                <accordion-group (isOpenChange)="toggleAccordion($event)">
+                <accordion-group (isOpenChange)="toggleAccordion($event, 1)">
                     <button class="btn btn-link btn-block clearfix"
                             accordion-heading type="button">
                         <div class="pull-left float-left">Категорії</div>
                         <span class=" float-right pull-right">
-                            <p *ngIf="isContentOpen">-</p>
-                            <p *ngIf="!isContentOpen">+</p>
+                            <p *ngIf="isContentOpen[1]">-</p>
+                            <p *ngIf="!isContentOpen[1]">+</p>
                         </span>
                     </button>
-                    <input type="checkbox" name="choose" class="choosing"
-                           (click)="changeData(hookahs)">
-                    <label for="choose">Кальяни</label>
-                    <br/>
-                    <input type="checkbox" name="choose" class="choosing"
-                           (click)="changeData(charcoals)">
-                    <label for="choose">Вугілля</label>
-                    <br/>
-                    <input type="checkbox" name="choose" class="choosing"
-                           (click)="changeData(tobaccos)">
-                    <label for="choose">Табак</label>
-                    <br/>
-                    <input type="checkbox" name="choose" class="choosing"
-                           (click)="changeData(accessories)">
-                    <label for="choose">Аксесуари</label>
+                    <div *ngFor="let category of categories">
+                        <input type="checkbox" class="choosing"
+                               [(ngModel)]="isChecked[category.id]"
+                               (change)="filterProduct(isChecked[category.id], category.id)">
+                        <label>{{category.name}}</label>
+                    </div>
                 </accordion-group>
-                <accordion-group (isOpenChange)="toggleAccordion($event)">
+                <accordion-group (isOpenChange)="toggleAccordion($event, 2)">
                     <button class="btn btn-link btn-block clearfix"
                             accordion-heading type="button">
                         <div class="pull-left float-left">Виробник</div>
                         <span class="float-right pull-right">
-                            <p *ngIf="isContentOpen">-</p>
-                            <p *ngIf="!isContentOpen">+</p>
+                            <p *ngIf="isContentOpen[2]">-</p>
+                            <p *ngIf="!isContentOpen[2]">+</p>
                         </span>
                     </button>
                     <input type="checkbox" name="choose" class="choosing">
@@ -67,13 +58,13 @@
                     <input type="checkbox" name="choose" class="choosing">
                     <label for="choose">Турція</label>
                     <br/></accordion-group>
-                <accordion-group (isOpenChange)="toggleAccordion($event)">
+                <accordion-group (isOpenChange)="toggleAccordion($event, 3)">
                     <button class="btn btn-link btn-block clearfix"
                             accordion-heading type="button">
                         <div class="pull-left float-left">Ціна</div>
                         <span class="float-right pull-right">
-                            <p *ngIf="isContentOpen">-</p>
-                            <p *ngIf="!isContentOpen">+</p>
+                            <p *ngIf="isContentOpen[3]">-</p>
+                            <p *ngIf="!isContentOpen[3]">+</p>
                         </span>
                     </button>
                     <input type="checkbox" name="choose" class="choosing">
@@ -87,20 +78,21 @@
             </button>
         </div>
         <div class="row items">
-            <div class="card col-md-3 m-2 item" *ngFor="let item of items">
+            <div class="card col-md-3 m-2 item"
+                 *ngFor="let product of items">
                 <img src="assets/images/inventory-page/hookah-pic.png"
                      class="card-img-top" [routerLink]="'item-page'">
                 <div class="card-body">
-                    <a routerLink="item-page"><p
-                            class="item-name">{{item.name}}</p>
+                    <a [routerLink]="['item-page', product.id]"><p
+                            class="item-name">{{product.name}}</p>
                     </a>
                     <div class="description">
                         <div class="price">
-                            <p class="number">{{item.price}}$</p>
+                            <p class="number">{{product.price}}$</p>
                             <p class="availability">В наявності</p>
                         </div>
                         <button class="shop"
-                                (click)="addToCart(item)"><img
+                                (click)="addToCart(product)"><img
                                 src="assets/images/inventory-page/rectangle-5.svg"
                                 class="shop-icon"/></button>
                     </div>

@@ -13,8 +13,7 @@ const routes: Routes = [
                 path: '', component: InventoryPageComponent, pathMatch: 'full',
             },
             {
-                path: 'item-page',
-                component: ItemPageComponent,
+                path: 'item-page/:id', component: ItemPageComponent,
                 pathMatch: 'full'
             },
             {

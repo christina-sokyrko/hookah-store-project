@@ -1,4 +1,8 @@
 import {Component, OnInit} from '@angular/core';
+import {InventoryService} from '../../../services/inventory.service';
+import {CartService} from '../../../services/cart.service';
+import {ActivatedRoute} from '@angular/router';
+import {first} from 'rxjs/operators';
 
 @Component({
     selector: 'app-item-page',
@@ -7,9 +11,16 @@ import {Component, OnInit} from '@angular/core';
 
 })
 export class ItemPageComponent implements OnInit {
+    id: number;
+    tobacco: any = {};
+    cartItems = [];
+    quantity: any;
 
-
-    constructor() {
+    constructor(
+        private inventoryService: InventoryService,
+        private cartService: CartService,
+        private route: ActivatedRoute,
+    ) {
     }
 
     public selectItems = [
@@ -31,8 +42,16 @@ export class ItemPageComponent implements OnInit {
         {image: 'assets/images/item-page/hookah-3.png'}
     ];
 
-    selectItem(event: any) {
-        console.log(event);
+    selectItem(value: any) {
+        this.quantity = value;
+    }
+
+    addToCart(item) {
+        if (!this.cartService.itemInCart(item)) {
+            item.qtyTotal = this.quantity;
+            this.cartService.addToCart(item);
+            this.cartItems = [...this.cartService.getItems()];
+        }
     }
 
     switchSlide(i) {
@@ -40,8 +59,12 @@ export class ItemPageComponent implements OnInit {
     }
 
     ngOnInit(): void {
-
-
+        this.id = this.route.snapshot.params.id;
+        this.inventoryService.getByIdTobaccos(this.id)
+            .pipe(first())
+            .subscribe(tobacco => {
+                this.tobacco = tobacco;
+            });
     }
 
 }

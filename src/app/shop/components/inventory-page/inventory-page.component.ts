@@ -10,17 +10,29 @@ import {CartService} from '../../../services/cart.service';
 })
 export class InventoryPageComponent implements OnInit, OnDestroy {
     public inventoryDestroyed$: Subject<void> = new Subject<void>();
-    tobaccos;
-    hookahs;
-    charcoals;
-    accessories;
-    items;
-    isContentOpen = false;
+    categories: any = [];
+    subCategories: any = [];
+    products: any = [];
+    isContentOpen: any = {};
     cartItems = [];
+    items: any = [];
+    isChecked: any = {};
 
     constructor(
         public inventoryService: InventoryService,
         private cartService: CartService) {
+    }
+
+    filterProduct(status: any, id: any) {
+        this.inventoryService.getFilterInventory(id).subscribe((res: any) => {
+            res.map(value => {
+                if (status === true) {
+                    this.items.push(value);
+                } else {
+                    this.items.splice(value, 1);
+                }
+            });
+        });
     }
 
     addToCart(item) {
@@ -31,28 +43,22 @@ export class InventoryPageComponent implements OnInit, OnDestroy {
         }
     }
 
-    toggleAccordion(event: any) {
-        console.log(event);
-        this.isContentOpen = event;
+    toggleAccordion(status: any, idAccordion) {
+        this.isContentOpen[idAccordion] = status;
     }
 
-    changeData(val): void {
-        this.items = val;
-    }
 
     ngOnInit(): void {
-        this.inventoryService.getAllTobaccos().subscribe(tobaccos => {
-            this.tobaccos = tobaccos;
+        this.inventoryService.getAllCategory().subscribe(categories => {
+            this.categories = categories;
         });
-        this.inventoryService.getAllCharcoals().subscribe(charcoals => {
-            this.charcoals = charcoals;
+        this.inventoryService.getAllSubCategory().subscribe(subCategories => {
+            this.subCategories = subCategories;
         });
-        this.inventoryService.getAllHookahs().subscribe(hookahs => {
-            this.hookahs = hookahs;
+        this.inventoryService.getAllInventory().subscribe(products => {
+            this.products = products;
         });
-        this.inventoryService.getAllAccessories().subscribe(accessories => {
-            this.accessories = accessories;
-        });
+
     }
 
     ngOnDestroy(): void {
