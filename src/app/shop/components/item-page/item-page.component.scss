@@ -144,8 +144,16 @@
   border: solid 1px rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.05);
 }
-.black-no-view {
-  color: #05080f;
+.count-button {
+  background-color: #080c17;
+  border: solid #fcfcfc 1px;
+  color: #fcfcfc;
+}
+.count-input {
+  background-color: #080c17;
+  border: solid #fcfcfc 1px;
+  color: #fcfcfc;
+  
 }
 
 @media screen and (max-width: 764) {

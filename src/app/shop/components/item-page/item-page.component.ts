@@ -3,7 +3,7 @@ import {InventoryService} from '../../../services/inventory.service';
 import {CartService} from '../../../services/cart.service';
 import {ActivatedRoute} from '@angular/router';
 import {first} from 'rxjs/operators';
-import {NgForm} from '@angular/forms';
+
 
 
 @Component({
@@ -17,11 +17,10 @@ export class ItemPageComponent implements OnInit {
     tobacco: any = {};
     cartItems = [];
     quantity: any;
+    count = 0;
     
-    onSubmit(f: NgForm) {
-        console.log(f.value);  
-        console.log(f.valid); 
-      }
+    
+    
   
 
     constructor(
@@ -67,7 +66,16 @@ export class ItemPageComponent implements OnInit {
             .subscribe(tobacco => {
                 this.tobacco = tobacco;
             });
-           
+     }
+     increase() {
+        
+        this.count++;
+        count <= 200;
+    }
+
+    decrease() {
+        
+        this.count--;
     }
     
 }

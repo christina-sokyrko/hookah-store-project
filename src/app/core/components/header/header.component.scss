@@ -1,6 +1,6 @@
 .header-main {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color:black;
   top: 0;
   width: 100%;
   left: 0;
@@ -10,7 +10,9 @@
   .navbar-brand {
     margin-right: 56px;
   }
- 
+ .collapse {
+   background-color: black;
+ }
 
   .nav-link {
     color: white;
@@ -24,7 +26,7 @@
 }
 
 .actions {
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
+ 
   margin-bottom: -8px;
   margin-top: -8px;
 }
@@ -56,4 +58,5 @@
 .shop-button {
   background-color: rgba(0, 0, 0, 0.4);
   border: rgba(0, 0, 0, 0.4);
+  
 }
