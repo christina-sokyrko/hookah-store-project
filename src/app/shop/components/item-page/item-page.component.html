@@ -54,12 +54,14 @@
                     <button class="btn btn-primary buy"
                             (click)="addToCart(tobacco)"
                     >Придбати</button>
-                    <select class="quantity"
-                            (change)="selectItem($event.target.value)">
-                        <option *ngFor="let item of selectItems"
-                                value="{{item.value}}">{{item.title}}
-                        </option>
-                    </select>
+                   
+                     <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+                        <input name="quantity" placeholder="Введіть кількість" ngModel required #quantity="ngModel">  
+                    </form>   
+                    <p class="black-no-view">Quantity value: {{ quantity.value }}</p>
+                    <p class="black-no-view">Quantity valid: {{ quantity.valid }}</p>
+                    <p class="black-no-view">Form value: {{ f.value | json }}</p>
+                    <p class="black-no-view">Form valid: {{ f.valid }}</p>
                 </div>
             </div>
         </section>
