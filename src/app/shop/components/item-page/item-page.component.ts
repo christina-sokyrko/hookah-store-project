@@ -70,7 +70,7 @@ export class ItemPageComponent implements OnInit {
      increase() {
         
         this.count++;
-        count <= 200;
+        
     }
 
     decrease() {
