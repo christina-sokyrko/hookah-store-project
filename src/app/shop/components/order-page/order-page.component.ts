@@ -44,7 +44,8 @@ export class OrderPageComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        
+        this.cartService.loadCart();
+        this.items = this.cartService.getItems();
     }
 
     increase(item, index) {

@@ -150,10 +150,11 @@
   color: #fcfcfc;
 }
 .count-input {
-  background-color: #080c17;
-  border: solid #fcfcfc 1px;
-  color: #fcfcfc;
-  
+  background-color:  #fcfcfc;
+ 
+  color:  #080c17;
+  border-top: solid #fcfcfc 1px;
+  border-bottom:  solid #fcfcfc 2px;;
 }
 
 @media screen and (max-width: 764) {
@@ -226,4 +227,7 @@
   border: solid blanchedalmond 1px;
   border-radius: 3px;
   color: blanchedalmond;
+}
+.counter-input {
+  margin-top: 10px;
 }
