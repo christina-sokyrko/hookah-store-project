@@ -1,6 +1,19 @@
 <div class="main-wrapper">
+    <div class="trigger-btn">
+        <button class="btn btn-primary modal-btn" (click)="openModal(template)">
+            Open modal</button>
+        <br><br>
+        <pre class="card card-block card-header">{{message}}</pre>
+        <ng-template #template>
+          <div class="modal-body text-center">
+            <p>Вам вже виповнилось 18 років?</p>
+            <button type="button" class="btn btn-default" (click)="confirm()" >Так</button>
+            <button type="button" class="btn btn-primary" (click)="decline()" >Ні</button>
+          </div>
+        </ng-template>
+    </div>
     <section class="main-banner">
-        <owl-carousel-o [options]="customOptions">
+       <owl-carousel-o [options]="customOptions">
             <ng-container *ngFor="let slide of slidesData">
                 <ng-template carouselSlide>
                     <div class="carousel-cont"

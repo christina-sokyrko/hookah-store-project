@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {OwlOptions} from 'ngx-owl-carousel-o';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import {TemplateRef} from '@angular/core';
 
 @Component({
     selector: 'app-dashboard',
@@ -7,6 +9,8 @@ import {OwlOptions} from 'ngx-owl-carousel-o';
     styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+    modalRef: BsModalRef;
+    message: string;
 
     customOptions: OwlOptions = {
         loop: true,
@@ -50,8 +54,23 @@ export class DashboardComponent implements OnInit {
         'assets/images/insta-img-4.png',
     ];
 
-    constructor() {
-    }
+   
+    constructor(private modalService: BsModalService) {}
+    openModal(template: TemplateRef<any>) {
+        this.modalRef = this.modalService.show(template, {class: 'modal-sm'});
+      }
+     
+      confirm(): void {
+        this.message = 'Confirmed!';
+        this.modalRef.hide();
+      }
+     
+      decline(): void {
+        this.message = 'Declined!';
+        this.modalRef.hide();
+      }
+ 
+    
 
     ngOnInit(): void {
     }
