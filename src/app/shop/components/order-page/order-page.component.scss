@@ -24,9 +24,16 @@
 .left-btn {
   background-color: #1e2127;
 }
+.left-btn:hover {
+  background-color:silver;
+}
 
 .right-btn {
   background-color: #4fc1cb;
+}
+
+.right-btn:hover {
+  background-color:midnightblue;
 }
 
 .pic {

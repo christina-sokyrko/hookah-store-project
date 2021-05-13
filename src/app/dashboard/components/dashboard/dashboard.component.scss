@@ -186,7 +186,15 @@ img {
 }
 .modal-btn {
   height: 50px;
-  width: 100px;
-  color:cadetblue;
-  
+  width: 120px;
+  background-color:#4fc1cb;
+  color: white;
+  margin-top: 40px;
+  margin-left: 45%;
+}
+.modal-btn:hover {
+  background-color: midnightblue;
+}
+.to-buy:hover {
+  background-color: midnightblue;
 }
