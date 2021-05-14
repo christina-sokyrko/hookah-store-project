@@ -1,5 +1,5 @@
 .main-wrapper {
-  width: 1100px;
+  max-width: 100%;
   margin: 120px auto 80px;
   color: white;
 }
@@ -30,7 +30,7 @@
 }
 
 .pic {
-  width: 130px;
+  max-width: 130px;
 }
 
 .item {
@@ -45,15 +45,50 @@
 .left-block {
   flex-direction: column;
   padding: 5px;
+  max-width: 60%;
 }
 
 .item-btn {
-  margin-left: auto;
+ margin-right: 10px;
 }
 
 .cut-text {
   text-overflow: ellipsis;
   overflow: hidden;
-  width: 300px;
+  max-width: 100%;
   white-space: nowrap;
 }
+.trash {
+ margin-left: 90%;
+}
+@media screen and (max-width: 1120px) {
+  .trash {
+    margin-left: -10%;
+   }
+  
+}
+@media screen and (max-width: 950px) {
+  .trash {
+    margin-top: 100px;
+    margin-left: -50px;
+   }
+  
+}
+@media screen and (max-width: 766px) {
+  .trash {
+   margin-left: 200%;
+   margin-top: 40%;
+   }
+
+  .right-btn {
+ margin-bottom: 10px;
+}
+}
+@media screen and (max-width: 612px) {
+  .trash {
+    margin-top: 100px;
+    margin-left: -50px;
+   }
+  
+}
+

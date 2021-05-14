@@ -14,6 +14,7 @@ import {AccordionModule} from 'ngx-bootstrap/accordion';
 import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import {CarouselModule} from 'ngx-bootstrap/carousel';
 import {FormsModule} from '@angular/forms';
+import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
 
 @NgModule({
     declarations: [
@@ -33,8 +34,9 @@ import {FormsModule} from '@angular/forms';
         BsDropdownModule.forRoot(),
         CarouselModule,
         FormsModule,
+        ModalModule
     ],
-    providers: [],
+    providers: [BsModalService],
     exports: [
         InventoryPageComponent
     ],
