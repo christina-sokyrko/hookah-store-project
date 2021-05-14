@@ -107,9 +107,10 @@
   height: 50px;
   background-color: #4fc1cb;
   margin-right: 10px;
+  
 }
 .buy:hover {
-  background-color: midnightblue;
+  opacity: 60%;
 }
 
 .form-control {
@@ -146,22 +147,22 @@
   border: solid 1px rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.05);
 }
+
 .count-button {
   background-color: #4fc1cb;;
-  border: solid #4fc1cb 1px;
+  border: none;
   color: #fcfcfc;
+ 
 }
 .count-button:hover {
-  background-color: midnightblue;
+  opacity: 60%;
 }
 .count-input {
   background-color:  #fcfcfc;
-  border-color: #fcfcfc;
-  border-right: #fcfcfc;;
- 
-  color:  #080c17;
-  border-top: solid #fcfcfc 1px;
-  border-bottom:  solid #fcfcfc 2px;;
+ color:  #080c17;
+  border: none;
+ transform: translateY(1px);
+  
 }
 
 @media screen and (max-width: 764) {
@@ -200,6 +201,17 @@
   background-color: rgba(255, 255, 255, 0.00);
   border: rgba(255, 255, 255, 0.00);
 }
+.shop-icon {
+  
+  width: 40px;
+  height: 40px;
+ 
+  border-radius: 5px;
+}
+.shop-icon:hover {
+  background-color: honeydew;
+  opacity: 30%;
+}
 
 .big-pic {
   max-width: 650px;
@@ -234,7 +246,4 @@
   border: solid blanchedalmond 1px;
   border-radius: 3px;
   color: blanchedalmond;
-}
-.counter-input {
-  margin-top: 10px;
 }

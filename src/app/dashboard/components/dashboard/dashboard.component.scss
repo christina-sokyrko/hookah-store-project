@@ -138,6 +138,7 @@ img {
       }
     }
   }
+  
 
   .mini-banner-img {
     margin-left: auto;
@@ -193,8 +194,28 @@ img {
   margin-left: 45%;
 }
 .modal-btn:hover {
-  background-color: midnightblue;
+  opacity: 60%;
 }
-.to-buy:hover {
-  background-color: midnightblue;
+.modal-window {
+  background:black;
+  height: 200px;
+  color: white;
+  border: solid gray 1px;
+}
+.question {
+  transform: translateY(45px);
+}
+.left-button {
+  background-color: gray;
+  color: white;
+  margin-right: 15px;
+  transform: translateY(45px);
+  
+}
+.right-button {
+  background-color: red;
+  border: none;
+  margin-left: 25px;
+  transform: translateY(45px);
+  
 }
