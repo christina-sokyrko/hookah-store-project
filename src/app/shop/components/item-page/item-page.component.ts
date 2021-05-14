@@ -5,7 +5,6 @@ import {ActivatedRoute} from '@angular/router';
 import {first} from 'rxjs/operators';
 
 
-
 @Component({
     selector: 'app-item-page',
     templateUrl: './item-page.component.html',
@@ -14,24 +13,18 @@ import {first} from 'rxjs/operators';
 })
 export class ItemPageComponent implements OnInit {
     id: number;
-    tobacco: any = {};
+    product: any = {};
     cartItems = [];
-    quantity: any;
-    count = 0;
-    
-    
-    
-  
+    count = 1;
+
 
     constructor(
         private inventoryService: InventoryService,
         private cartService: CartService,
         private route: ActivatedRoute,
-       
     ) {
     }
 
-    
 
     activeSlide = 0;
 
@@ -44,12 +37,10 @@ export class ItemPageComponent implements OnInit {
         {image: 'assets/images/item-page/hookah-3.png'}
     ];
 
-    
-
 
     addToCart(item) {
         if (!this.cartService.itemInCart(item)) {
-            item.qtyTotal = this.quantity;
+            item.qtyTotal = this.count;
             this.cartService.addToCart(item);
             this.cartItems = [...this.cartService.getItems()];
         }
@@ -63,19 +54,17 @@ export class ItemPageComponent implements OnInit {
         this.id = this.route.snapshot.params.id;
         this.inventoryService.getByIdTobaccos(this.id)
             .pipe(first())
-            .subscribe(tobacco => {
-                this.tobacco = tobacco;
+            .subscribe(product => {
+                this.product = product;
             });
-     }
-     increase() {
-        
+    }
+
+    increase() {
         this.count++;
-        
     }
 
     decrease() {
-        
         this.count--;
     }
-    
+
 }
