@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {DashboardComponent} from './components/dashboard/dashboard.component';
 import {CarouselModule} from 'ngx-owl-carousel-o';
 import {DashboardRoutingModule} from './dashboard-routing.module';
+import {ModalModule} from "ngx-bootstrap/modal";
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import {DashboardRoutingModule} from './dashboard-routing.module';
         CommonModule,
         CarouselModule,
         DashboardRoutingModule,
+        ModalModule,
     ]
 })
 export class DashboardModule {
