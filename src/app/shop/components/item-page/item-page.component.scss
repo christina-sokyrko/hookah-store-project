@@ -108,7 +108,9 @@
   background-color: #4fc1cb;
   margin-right: 10px;
 }
-
+.buy:hover {
+  background-color: midnightblue;
+}
 
 .form-control {
   width: 75px;
@@ -145,12 +147,17 @@
   background-color: rgba(255, 255, 255, 0.05);
 }
 .count-button {
-  background-color: #080c17;
-  border: solid #fcfcfc 1px;
+  background-color: #4fc1cb;;
+  border: solid #4fc1cb 1px;
   color: #fcfcfc;
+}
+.count-button:hover {
+  background-color: midnightblue;
 }
 .count-input {
   background-color:  #fcfcfc;
+  border-color: #fcfcfc;
+  border-right: #fcfcfc;;
  
   color:  #080c17;
   border-top: solid #fcfcfc 1px;

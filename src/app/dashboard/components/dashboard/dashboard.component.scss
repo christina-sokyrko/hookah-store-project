@@ -181,4 +181,20 @@ img {
 @media screen and (max-width: 320px) {
   
 }
-
+.trigger-btn {
+  height: 150px;
+}
+.modal-btn {
+  height: 50px;
+  width: 120px;
+  background-color:#4fc1cb;
+  color: white;
+  margin-top: 40px;
+  margin-left: 45%;
+}
+.modal-btn:hover {
+  background-color: midnightblue;
+}
+.to-buy:hover {
+  background-color: midnightblue;
+}
