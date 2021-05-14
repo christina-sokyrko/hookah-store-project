@@ -55,7 +55,7 @@
   text-align: center;
 }
 .use-filters:hover {
-  background-color: midnightblue;
+  opacity: 60%;
 }
 
 .items {
@@ -110,10 +110,16 @@
 
 .shop {
   margin-left: 80px;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   background: none;
   border: none;
+  border-radius: 5px;
+}
+.shop-icon:hover {
+  background-color: honeydew;
+  opacity: 30%;
+  border-radius: 5px;
 }
 
 //*Accordion*//
