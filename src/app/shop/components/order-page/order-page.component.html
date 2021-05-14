@@ -48,7 +48,7 @@
                 <p style="font-size: 24px">Загальна
                     ціна: {{total}} ₴</p>
                 <hr>
-                <button class="btn btn-outline-secondary" (click)="clearCart()">
+                <button class="btn btn-outline-secondary clear-cart" (click)="clearCart()">
                     Очистити корзину
                 </button>
             </div>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="left-block">
                     <p class="cut-text">{{item.name}}</p>
-                    <div style="display: flex; flex-flow: row">
+                    <div class="item-price" style="display: flex; flex-flow: row">
                         <div class="input-group"
                              style="margin-left: 20px; max-width: 150px;">
                             <button class="btn btn-outline-secondary"
@@ -77,7 +77,7 @@
                                     (click)="decrease(item, i)">-
                             </button>
                         </div>
-                        <div style="display: flex; flex-flow: row">
+                        <div  style="display: flex; flex-flow: row">
                             <p>Ціна:</p>
                             <p #subTotalWrap>{{ item.price }}₴</p>
                         </div>
