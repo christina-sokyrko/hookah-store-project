@@ -54,7 +54,7 @@
                     <button class="btn btn-primary buy"
                             (click)="addToCart(tobacco)"
                     >Придбати</button>
-                    <div class="counter-input">
+                    <div class="btn-group">
                         <button class="count-button"(click)="decrease()"[disabled]="count <= 0" style="border-radius: 2px 0 0 2px; border-right:#4fc1cb; height: 50px; width:40px; padding: revert;">-</button>
                          <input class="count-input" value={{count}}  style="max-width: 40px; text-align: center; height: 50px; padding: unset;background-clip: unset"/>
                          <button class="count-button"(click)="increase()" style="border-radius: 0 2px 2px 0; border-left: #4fc1cb; height: 50px; width:40px; padding: revert;">+</button>

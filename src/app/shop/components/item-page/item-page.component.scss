@@ -148,20 +148,27 @@
   background-color: rgba(255, 255, 255, 0.05);
 }
 
+
 .count-button {
   background-color: #4fc1cb;;
   border: none;
   color: #fcfcfc;
  
+ 
 }
 .count-button:hover {
   opacity: 60%;
+}
+.count-button:active {
+ background-color:rgb(43, 43, 231);
+  border: solid blue 3px;
+  transition: 0.5s;
 }
 .count-input {
   background-color:  #fcfcfc;
  color:  #080c17;
   border: none;
- transform: translateY(1px);
+ 
   
 }
 
