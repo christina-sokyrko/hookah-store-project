@@ -1,3 +1,14 @@
+.main-main-wrapper {
+  min-height: calc(100vh - 80px);
+  overflow: hidden;
+}
+.main-wrapper {
+  max-width: 1300px;
+  margin-top: 63px;
+  min-height: calc(100vh - 80px);
+  margin-left: auto;
+  margin-right: auto;
+}
 .navbar {
   margin-top: 75px;
 }
@@ -33,7 +44,7 @@
   margin-right: auto;
 }
 
-.side-bar {
+#side-bar {
   width: 360px;
   height: 100%;
   margin: 7px 24px 0 0;
@@ -96,9 +107,19 @@
   color: #52c24e;
   margin-bottom: 0;
 }
-
+.shop-btn {
+  
+  margin-left: 90%;
+}
+@media screen and (max-width: 960px) {
+  .shop-btn {
+  
+    margin-left: 20%;
+  }
+}
 .shop {
-  margin-left: 120px;
+ 
+  
   height:50px;
   width: 50px;
  border: solid #4fc1cb 1px;

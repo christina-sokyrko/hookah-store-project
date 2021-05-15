@@ -1,4 +1,6 @@
 
+<div class="main-main-wrapper">
+    <div class="main-wrapper">
 <nav class="navbar navbar-expand-md container navbar-dark">
     <div class="row left-small">
         <a href="#">
@@ -9,21 +11,16 @@
     </div>
     <button class="navbar-toggler" type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#inventoryNavBar"
+            data-bs-target="#side-bar"
             aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="inventoryNavBar"
-         style="flex-flow: row-reverse;">
-        <div style="flex-flow: row-reverse; display: flex">
-
-        </div>
-    </div>
+    
 </nav>
 <div class="container-lg">
     <section class="inventory">
-        <div class="side-bar d-none d-md-block d-lg-block">
+        <div class="collapse d-none d-md-block d-lg-block" id="side-bar">
             <accordion [isAnimated]="true">
                 <accordion-group (isOpenChange)="toggleAccordion($event, 1)">
                     <button class="btn btn-link btn-block clearfix"
@@ -91,11 +88,15 @@
                             <p class="number">{{product.price}}$</p>
                             <p class="availability">В наявності</p>
                         </div>
+                        <div class=shop-btn>
                         <button class="shop"
                                 (click)="addToCart(product)"><i class="bi bi-cart-plus shop-icon"></i></button>
+                        </div>        
                     </div>
                 </div>
             </div>
         </div>
     </section>
+</div>
+</div>
 </div>
