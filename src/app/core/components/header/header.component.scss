@@ -24,6 +24,9 @@
     padding: 11px 24px;
   }
 }
+.burger-icon {
+  color: white;
+}
 
 .actions {
  
@@ -31,9 +34,9 @@
   margin-top: -8px;
 }
 
-.shopping-cart-icon {
-  width: 20px;
-  height: 19px;
+.shop-icon {
+  color: white;
+  font-size: 20px;
   margin: 23px 24px 21px;
   object-fit: contain;
 }
@@ -46,9 +49,9 @@
 }
 
 .user-icon {
-  width: 20px;
-  height: 19px;
-  margin: 23px 24px 21px;
+  font-size: 20px;
+  color: white;
+  margin: 25px 24px 21px;
   object-fit: contain;
 }
 .button-icon {
