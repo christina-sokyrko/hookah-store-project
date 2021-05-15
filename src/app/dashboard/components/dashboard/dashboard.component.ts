@@ -61,14 +61,21 @@ export class DashboardComponent implements OnInit {
 
     confirm(): void {
         this.isModalShown = false;
+        sessionStorage.setItem('confirm_modal', JSON.stringify(false));
     }
 
     decline(): void {
         this.location.back();
+        sessionStorage.setItem('confirm_modal', JSON.stringify(true));
     }
 
     ngOnInit(): void {
-        this.isModalShown = true;
+        const confirm = JSON.parse(sessionStorage.getItem('confirm_modal'));
+        if (confirm === true || confirm == null) {
+            sessionStorage.setItem('confirm_modal', JSON.stringify(true));
+            this.isModalShown = true;
+        } else {
+            this.isModalShown = false;
+        }
     }
-
 }
