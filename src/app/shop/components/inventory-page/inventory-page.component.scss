@@ -9,6 +9,7 @@
   justify-content: space-around;
   align-items: baseline;
 }
+
 .home-icon {
   margin-top: -5px;
   color: white;
@@ -57,6 +58,7 @@
   position: absolute;
   bottom: 0;
   margin-left: 7px;
+  align-items: center;
 }
 
 .card-img-top {
@@ -99,22 +101,23 @@
 
 .shop {
   margin-left: 120px;
-  height:50px;
+  height: 50px;
   width: 50px;
- border: solid #4fc1cb 1px;
- background: none;
-  
+  border: solid #4fc1cb 1px;
+  background: none;
+
   border-radius: 5px;
 }
 
 .shop:hover {
   background: rgb(70, 70, 70);
- 
+
   border-radius: 5px;
 }
+
 .shop-icon {
- font-size: 24px;
-  color:  #4fc1cb;
+  font-size: 24px;
+  color: #4fc1cb;
 }
 
 //*Accordion*//
@@ -160,5 +163,16 @@
   }
   .availability {
     font-size: 10px;
+  }
+  .shop {
+    margin-left: 30px;
+    width: 30px;
+    height: 30px;
+    margin-top: 8px;
+  }
+  .shop-icon {
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
   }
 }
