@@ -134,4 +134,9 @@
    }
   
 }
-
+@media screen and (max-width: 400px) {
+  .trash {
+    margin-top: 50px;
+    margin-left: -130px;
+  }
+}

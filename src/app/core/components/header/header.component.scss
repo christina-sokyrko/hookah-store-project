@@ -61,5 +61,9 @@
 .shop-button {
   background-color: rgba(0, 0, 0, 0.4);
   border: rgba(0, 0, 0, 0.4);
+  height: 40px;
   
+}
+.shop-button:hover {
+background: #333333;
 }
