@@ -1,3 +1,15 @@
+.main-main-wrapper {
+  min-height: calc(100vh - 80px);
+  overflow: hidden;
+}
+
+.main-wrapper {
+  max-width: 1300px;
+  margin-top: 63px;
+  min-height: calc(100vh - 80px);
+  margin-left: auto;
+  margin-right: auto;
+}
 .navbar {
   margin-top: 75px;
 }
@@ -35,8 +47,9 @@
 }
 
 .side-bar {
-  width: 360px;
+  
   height: 100%;
+  min-width: 300px;
   margin: 7px 24px 0 0;
   padding: 24px 20px;
   border-radius: 4px;
@@ -48,8 +61,9 @@
   margin-right: 5px;
 }
 
+
 .items {
-  max-width: 1100px;
+  
   justify-content: center;
 }
 
