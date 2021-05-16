@@ -88,10 +88,12 @@
 
                 </div>
                 <div class="row items">
-                    <div class="card col-md-3 m-2 item" *ngFor="let product of items">
-                        <div class="image-thumb" [routerLink]="['item-page', product.id]">
+                    <div class="card col-md-3 m-2 item"
+                         *ngFor="let product of items">
+                        <div class="image-thumb"
+                             [routerLink]="['item-page', product.id]">
                             <p>
-                                {{product.name}}
+                                {{product.sub_category.name}}
                             </p>
                         </div>
                         <img src="{{product.picture.url}}"
@@ -116,4 +118,4 @@
             </section>
         </div>
     </div>
-</div>>
+</div>
