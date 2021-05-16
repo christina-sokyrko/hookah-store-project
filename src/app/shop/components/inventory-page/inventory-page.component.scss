@@ -138,7 +138,6 @@
 
 .shop:hover {
   background: rgb(70, 70, 70);
-
   border-radius: 5px;
 }
 
@@ -156,6 +155,19 @@
   color: white;
 }
 
+::ng-deep .card-accordion {
+  background: #05070e;
+}
+
+::ng-deep .card-accordion .card {
+  background: #05070e;
+  margin-bottom: 10px;
+}
+
+::ng-deep .card-accordion .card .card-header {
+  padding: 0;
+}
+
 ::ng-deep .card .card-header {
   border-bottom: solid 1px #2e3236;
 }
@@ -164,6 +176,10 @@
   color: white;
   text-decoration: none;
   font-size: 20px;
+}
+
+::ng-deep .collapsed-menu {
+  border-top: 2px solid;
 }
 
 //*Mobile*//
@@ -205,5 +221,16 @@
   .image-thumb {
     width: 140px;
     height: 200px
+  }
+}
+
+#inventoryNavBar {
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  #inventoryNavBar {
+    height: 0;
+    overflow: hidden;
   }
 }
