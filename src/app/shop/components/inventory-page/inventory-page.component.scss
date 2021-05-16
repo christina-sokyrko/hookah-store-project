@@ -10,6 +10,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 .navbar {
   margin-top: 75px;
 }
@@ -47,7 +48,7 @@
 }
 
 .side-bar {
-  
+
   height: 100%;
   min-width: 300px;
   margin: 7px 24px 0 0;
@@ -63,7 +64,7 @@
 
 
 .items {
-  
+
   justify-content: center;
 }
 
@@ -125,7 +126,6 @@
 
 .shop:hover {
   background: rgb(70, 70, 70);
-
   border-radius: 5px;
 }
 
@@ -143,6 +143,19 @@
   color: white;
 }
 
+::ng-deep .card-accordion {
+  background: #05070e;
+}
+
+::ng-deep .card-accordion .card {
+  background: #05070e;
+  margin-bottom: 10px;
+}
+
+::ng-deep .card-accordion .card .card-header {
+  padding: 0;
+}
+
 ::ng-deep .card .card-header {
   border-bottom: solid 1px #2e3236;
 }
@@ -151,6 +164,10 @@
   color: white;
   text-decoration: none;
   font-size: 20px;
+}
+
+::ng-deep .collapsed-menu {
+  border-top: 2px solid;
 }
 
 //*Mobile*//
@@ -190,16 +207,14 @@
     height: 30px;
   }
 }
+
 #inventoryNavBar {
- background-color:  #1e2127;
- border-radius: 5px;
- 
- 
+  margin-top: 10px;
 }
+
 @media screen and (min-width: 768px) {
   #inventoryNavBar {
     height: 0;
     overflow: hidden;
   }
-  
 }
