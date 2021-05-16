@@ -55,8 +55,9 @@ export class InventoryPageComponent implements OnInit, OnDestroy {
         this.inventoryService.getAllSubCategory().subscribe(subCategories => {
             this.subCategories = subCategories;
         });
-        this.inventoryService.getAllInventory().subscribe(products => {
-            this.products = products;
+        this.inventoryService.getAllTobaccos().subscribe(products => {
+            this.items = products;
+            this.isChecked = {1: true};
         });
 
     }

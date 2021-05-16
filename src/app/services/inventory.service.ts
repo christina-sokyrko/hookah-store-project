@@ -27,9 +27,12 @@ export class InventoryService {
     getAllInventory() {
         return this.http.get(environment.apiBaseUrl + '/products?_limit=300');
     }
+    getAllTobaccos() {
+        return this.http.get(environment.apiBaseUrl + '/products?_limit=300&category=1');
+    }
 
     getFilterInventory(id: number) {
-        return this.http.get(environment.apiBaseUrl + `/products?category=${id}`);
+        return this.http.get(environment.apiBaseUrl + `/products?_limit=300&category=${id}`);
     }
 }
 
