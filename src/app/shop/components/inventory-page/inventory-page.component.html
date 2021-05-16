@@ -16,9 +16,59 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="inventoryNavBar"
-         style="flex-flow: row-reverse;">
-        <div style="flex-flow: row-reverse; display: flex">
-
+    >
+        <div class="inventory-content">
+            <accordion [isAnimated]="true" class="acc">
+                <accordion-group  class="ac-group"(isOpenChange)="toggleAccordion($event, 1)">
+                    <button class="btn btn-link btn-block clearfix"
+                            accordion-heading type="button">
+                        <div class="pull-left float-left">Категорії</div>
+                        <span class=" float-right pull-right">
+                            <p *ngIf="isContentOpen[1]">-</p>
+                            <p *ngIf="!isContentOpen[1]">+</p>
+                        </span>
+                    </button>
+                    <div *ngFor="let category of categories">
+                        <input type="checkbox" class="choosing"
+                               [(ngModel)]="isChecked[category.id]"
+                               (change)="filterProduct(isChecked[category.id], category.id)">
+                        <label>{{category.name}}</label>
+                    </div>
+                </accordion-group>
+                <accordion-group class="ac-group" (isOpenChange)="toggleAccordion($event, 2)">
+                    <button class="btn btn-link btn-block clearfix"
+                            accordion-heading type="button">
+                        <div class="pull-left float-left">Виробник</div>
+                        <span class="float-right pull-right">
+                            <p *ngIf="isContentOpen[2]">-</p>
+                            <p *ngIf="!isContentOpen[2]">+</p>
+                        </span>
+                    </button>
+                    <input type="checkbox" name="choose" class="choosing">
+                    <label for="choose">Україна</label>
+                    <br/>
+                    <input type="checkbox" name="choose" class="choosing">
+                    <label for="choose">Китай</label>
+                    <br/>
+                    <input type="checkbox" name="choose" class="choosing">
+                    <label for="choose">Турція</label>
+                    <br/></accordion-group>
+                <accordion-group class="ac-group" (isOpenChange)="toggleAccordion($event, 3)">
+                    <button class="btn btn-link btn-block clearfix"
+                            accordion-heading type="button">
+                        <div class="pull-left float-left">Ціна</div>
+                        <span class="float-right pull-right">
+                            <p *ngIf="isContentOpen[3]">-</p>
+                            <p *ngIf="!isContentOpen[3]">+</p>
+                        </span>
+                    </button>
+                    <input type="checkbox" name="choose" class="choosing">
+                    <label for="choose">Дорогі</label>
+                    <br/>
+                    <input type="checkbox" name="choose" class="choosing">
+                    <label for="choose">Дешеві</label>
+                </accordion-group>
+            </accordion>
         </div>
     </div>
 </nav>
