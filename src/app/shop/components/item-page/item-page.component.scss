@@ -151,7 +151,7 @@
 
 
 .count-button {
-  background-color: #4fc1cb;;
+  background-color: #4fc1cb;
   border: none;
   color: #fcfcfc;
  
@@ -235,19 +235,23 @@
   height: 100px;
   width: 650px;
   margin: 0;
+  
+
 }
 
 .indicators-img {
   height: 100%;
+  
 }
 
 .indicator {
   height: 100%;
   margin: 0;
   padding: 0;
-  border: solid 1px white;
+  border: none;
 
 }
+
 
 .quantity {
   width: 75px;

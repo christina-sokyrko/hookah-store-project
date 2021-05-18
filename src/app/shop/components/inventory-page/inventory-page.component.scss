@@ -48,10 +48,11 @@
 }
 
 .side-bar {
-
+  position: fixed;
   height: 100%;
   min-width: 300px;
   margin: 7px 24px 0 0;
+  
   padding: 24px 20px;
   border-radius: 4px;
   background-color: #1e2127;
@@ -64,7 +65,7 @@
 
 
 .items {
-
+  margin-left: 300px;
   justify-content: center;
 }
 
@@ -233,4 +234,10 @@
     height: 0;
     overflow: hidden;
   }
+  
+}
+@media screen and (max-width: 768px) {
+.items {
+  margin-left: 0;
+ }
 }

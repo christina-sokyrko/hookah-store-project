@@ -12,9 +12,12 @@ img {
 .main-wrapper {
   min-height: calc(100vh - 80px);
 }
+.mini-banner {
+  max-width: 100%;
+}
 
 .carousel-cont {
-  width: 100%;
+  max-width: 100%;
   max-height: 100%;
   min-height: 100vh;
   display: flex;
@@ -205,9 +208,12 @@ img {
 
 .modal-window {
   background: black;
-  height: 200px;
+  height: 250px;
+  width: 400px;
   color: white;
   border: solid gray 1px;
+  margin-top: -100px;
+  margin-left: 200px;
 }
 
 .question {
@@ -215,16 +221,18 @@ img {
 }
 
 .left-button {
-  background-color: gray;
+  background-color: #4fc1cb;
   color: white;
   margin-right: 15px;
+  height: 40px;
   transform: translateY(45px);
 
 }
 
 .right-button {
-  background-color: red;
+  background-color: gray;
   border: none;
+  height: 40px;
   margin-left: 25px;
   transform: translateY(45px);
 
