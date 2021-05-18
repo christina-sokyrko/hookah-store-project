@@ -236,11 +236,13 @@
   width: 650px;
   margin: 0;
   
+  
 
 }
 
 .indicators-img {
   height: 100%;
+  border:none;
   
 }
 
@@ -249,7 +251,9 @@
   margin: 0;
   padding: 0;
   border: none;
-
+}
+.indicator:active {
+ 
 }
 
 

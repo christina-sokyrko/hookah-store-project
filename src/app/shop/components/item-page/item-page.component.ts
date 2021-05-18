@@ -26,6 +26,7 @@ export class ItemPageComponent implements OnInit {
     }
 
 
+
     activeSlide = 0;
 
     slides = [
@@ -49,6 +50,7 @@ export class ItemPageComponent implements OnInit {
     switchSlide(i) {
         this.activeSlide = i;
     }
+    
 
     ngOnInit(): void {
         this.id = this.route.snapshot.params.id;
