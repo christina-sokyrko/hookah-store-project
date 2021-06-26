@@ -62,21 +62,22 @@
                     <div class="item-price" style="display: flex; flex-flow: row">
                         <div class="input-group"
                              style="margin-left: 20px; max-width: 150px;">
-                            <button class="btn btn-outline-secondary"
-                                    style="border-radius: 10px 0 0 10px; height: 30px; padding: revert;"
-                                    [disabled]="item.qtyTotal == item.amount"
-                                    (click)="increase(item, i)">+
+                             <button [disabled]="item.qtyTotal == 1"
+                                    class="btn btn-outline-secondary"
+                                    style="border-radius:  10px 0 0 10px; height: 30px; padding: revert;"
+                                    (click)="decrease(item, i)">-
                             </button>
+                            
                             <input [(ngModel)]="item.qtyTotal"
                                    value="{{ item.qtyTotal }}"
                                    (change)="changeSubtotal(item ,i)"
-                                   min="1" type="text" class="form-control"
+                                   type="number" class="form-control"
                                    style="max-width: 40px; text-align: center; height: 30px; padding: unset;background-clip: unset"/>
-                            <button [disabled]="item.qtyTotal <= 1"
-                                    class="btn btn-outline-secondary"
-                                    style="border-radius: 0 10px 10px 0; height: 30px; padding: revert;"
-                                    (click)="decrease(item, i)">-
-                            </button>
+                           <button class="btn btn-outline-secondary"
+                                   style="border-radius: 0 10px 10px 0; height: 30px; padding: revert;"
+                                   [disabled]="item.qtyTotal > 19"
+                                   (click)="increase(item, i)">+
+                           </button>
                         </div>
                         <div  style="display: flex; flex-flow: row">
                             <p>Ціна:</p>

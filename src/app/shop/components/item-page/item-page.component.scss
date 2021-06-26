@@ -170,7 +170,11 @@
  color:  #080c17;
   border: none;
  
-  
+}
+.count-input::-webkit-outer-spin-button,
+.count-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 @media screen and (max-width: 764) {
