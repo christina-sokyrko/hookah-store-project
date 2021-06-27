@@ -15,6 +15,8 @@ import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import {CarouselModule} from 'ngx-bootstrap/carousel';
 import {FormsModule} from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
     declarations: [
@@ -35,6 +37,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
         CarouselModule,
         FormsModule,
         ModalModule.forRoot(),
+        NgxMaskModule.forRoot(),
     ],
     providers: [],
     exports: [

@@ -1,15 +1,19 @@
 import {Component, ElementRef, OnInit} from '@angular/core';
 import {QueryList, ViewChildren} from '@angular/core';
 import {CartService} from '../../../services/cart.service';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 @Component({
     selector: 'app-order-page',
     templateUrl: './order-page.component.html',
     styleUrls: ['./order-page.component.scss']
 })
+
 export class OrderPageComponent implements OnInit {
     @ViewChildren('subTotalWrap') subTotalItems: QueryList<ElementRef>;
     items = [];
+   
 
     constructor(
         private cartService: CartService,
