@@ -22,6 +22,12 @@ export class InventoryPageComponent implements OnInit, OnDestroy {
         public inventoryService: InventoryService,
         private cartService: CartService) {
     }
+    toBottom(){
+        document.getElementById("bottom").scrollIntoView();
+    }
+    toTop(){
+        document.getElementById("top").scrollIntoView();
+    }
 
     filterProduct(status: any, id: any) {
         this.inventoryService.getFilterInventory(id).subscribe((res: any) => {

@@ -1,8 +1,7 @@
-import {Component, ElementRef, OnInit} from '@angular/core';
-import {QueryList, ViewChildren} from '@angular/core';
-import {CartService} from '../../../services/cart.service';
-import { NgxMaskModule, IConfig } from 'ngx-mask'
-export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
+import { Component, ElementRef, OnInit } from '@angular/core';
+import { QueryList, ViewChildren } from '@angular/core';
+import { CartService } from '../../../services/cart.service';
+
 
 @Component({
     selector: 'app-order-page',
@@ -13,12 +12,19 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 export class OrderPageComponent implements OnInit {
     @ViewChildren('subTotalWrap') subTotalItems: QueryList<ElementRef>;
     items = [];
-   
+
 
     constructor(
         private cartService: CartService,
     ) {
     }
+
+    pattern = {
+        B: {
+          pattern: new RegExp('\\d'),
+          symbol: 'X',
+        },
+      };
 
     get total() {
         return this.items.reduce(
@@ -26,9 +32,11 @@ export class OrderPageComponent implements OnInit {
                 qtyTotal: 1,
                 price: sum.price + x.qtyTotal * x.price
             }),
-            {qtyTotal: 1, price: 0}
+            { qtyTotal: 1, price: 0 }
         ).price;
     }
+
+    
 
     changeSubtotal(item, index) {
         const qty = item.qtyTotal;
@@ -47,6 +55,7 @@ export class OrderPageComponent implements OnInit {
         this.items = [...this.cartService.getItems()];
     }
 
+   
     ngOnInit(): void {
         this.cartService.loadCart();
         this.items = this.cartService.getItems();

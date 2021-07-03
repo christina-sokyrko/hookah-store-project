@@ -16,7 +16,10 @@ import {CarouselModule} from 'ngx-bootstrap/carousel';
 import {FormsModule} from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { NgxMaskModule, IConfig } from 'ngx-mask'
-export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
+
+const maskConfig: Partial<IConfig> = {
+  validation: false,
+};
 
 @NgModule({
     declarations: [
@@ -37,7 +40,8 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
         CarouselModule,
         FormsModule,
         ModalModule.forRoot(),
-        NgxMaskModule.forRoot(),
+        NgxMaskModule.forRoot(maskConfig),
+        
     ],
     providers: [],
     exports: [

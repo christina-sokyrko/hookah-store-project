@@ -7,39 +7,32 @@
             <div class="row">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text"
-                              id="basic-addon1">Ім'я</span>
+                        <span class="input-group-text" id="basic-addon1">Ім'я</span>
                     </div>
-                    <input type="text" class="form-control"
-                           placeholder="Введіть Ваше ім'я" aria-label="Username"
-                           aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" placeholder="Введіть Ваше ім'я" aria-label="Username"
+                        aria-describedby="basic-addon1">
                 </div>
 
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text"
-                              id="basic-addon2">Телефон</span>
+                        <span class="input-group-text" id="basic-addon2">Телефон </span>
                     </div>
-                    <input type="text" class="form-control"
-                           placeholder="Введіть контактний номер телефону"
-                           aria-label="Username"
-                           aria-describedby="basic-addon1">
+                    <input type="text"  prefix="+38(0" mask="00) 000 00 00" class="form-control" 
+                        aria-label="Username" aria-describedby="basic-addon1">
+                        
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text"
-                              id="basic-addon3">E-mail</span>
+                        <span class="input-group-text" id="basic-addon3">E-mail</span>
                     </div>
-                    <input type="text" class="form-control"
-                           placeholder="Введіть Вашу електронну пошту"
-                           aria-label="Username"
-                           aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" placeholder="Введіть Вашу електронну пошту"
+                        aria-label="Username" aria-describedby="basic-addon1">
                 </div>
             </div>
             <div class="buttons">
-                
+
                 <button class="btn dark-btn left-btn" onclick="document.location='shop'">Назад</button>
-                
+
                 <button class="btn primary-btn right-btn">Продовжити</button>
             </div>
         </div>
@@ -54,32 +47,26 @@
             </div>
             <div class="item" *ngFor="let item of items; let i = index">
                 <div class="item-image">
-                    <img src="assets/images/item-page/hookah-pic.png"
-                         class="pic"/>
+                    <img src="assets/images/item-page/hookah-pic.png" class="pic" />
                 </div>
                 <div class="left-block">
                     <p class="cut-text">{{item.name}}</p>
                     <div class="item-price" style="display: flex; flex-flow: row">
-                        <div class="input-group"
-                             style="margin-left: 20px; max-width: 150px;">
-                             <button [disabled]="item.qtyTotal == 1"
-                                    class="btn btn-outline-secondary"
-                                    style="border-radius:  10px 0 0 10px; height: 30px; padding: revert;"
-                                    (click)="decrease(item, i)">-
+                        <div class="input-group" style="margin-left: 20px; max-width: 150px;">
+                            <button [disabled]="item.qtyTotal == 1" class="btn btn-outline-secondary"
+                                style="border-radius:  10px 0 0 10px; height: 30px; padding: revert;"
+                                (click)="decrease(item, i)">-
                             </button>
-                            
-                            <input [(ngModel)]="item.qtyTotal"
-                                   value="{{ item.qtyTotal }}"
-                                   (change)="changeSubtotal(item ,i)"
-                                   type="number" class="form-control"
-                                   style="max-width: 40px; text-align: center; height: 30px; padding: unset;background-clip: unset"/>
-                           <button class="btn btn-outline-secondary"
-                                   style="border-radius: 0 10px 10px 0; height: 30px; padding: revert;"
-                                   [disabled]="item.qtyTotal > 19"
-                                   (click)="increase(item, i)">+
-                           </button>
+
+                            <input [(ngModel)]="item.qtyTotal" value="{{ item.qtyTotal }}"
+                                (change)="changeSubtotal(item ,i)" type="number" class="form-control"
+                                style="max-width: 40px; text-align: center; height: 30px; padding: unset;background-clip: unset" />
+                            <button class="btn btn-outline-secondary"
+                                style="border-radius: 0 10px 10px 0; height: 30px; padding: revert;"
+                                [disabled]="item.qtyTotal > 19" (click)="increase(item, i)">+
+                            </button>
                         </div>
-                        <div  style="display: flex; flex-flow: row">
+                        <div style="display: flex; flex-flow: row">
                             <p>Ціна:</p>
                             <p #subTotalWrap>{{ item.price }}₴</p>
                         </div>
@@ -87,8 +74,7 @@
                     </div>
                 </div>
                 <div class="item-btn">
-                    <button class="trash btn btn-outline-secondary"
-                            (click)="removeFromCart(item)">
+                    <button class="trash btn btn-outline-secondary" (click)="removeFromCart(item)">
                         <i class="bi bi-trash-fill" style="font-size: 20px"></i>
                     </button>
                 </div>
