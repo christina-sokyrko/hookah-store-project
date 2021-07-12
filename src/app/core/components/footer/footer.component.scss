@@ -2,6 +2,8 @@ footer {
   background-color: #000000;
   height: 80px;
   width: 100%;
+  position: relative;
+  margin-top: 100px;
 }
 @media screen and (max-width: 766px) {
   footer {
@@ -42,4 +44,8 @@ height: 120px;
     font-size: 12px;
     color: rgba(255, 255, 255, 0.5);
   }
+}
+.dev {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
 }

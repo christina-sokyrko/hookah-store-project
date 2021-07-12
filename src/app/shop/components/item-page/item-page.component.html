@@ -3,7 +3,7 @@
         <section class="path">
             <div class="row left-small">
                 <div class="cell">
-                    <a href='/'><i class="bi bi-house-door home-icon"></i>
+                    <a a [routerLink]="''"><i class="bi bi-house-door home-icon" [routerLink]="''"></i>
                            </a>
                 </div>
                 <div class="cell">
@@ -60,10 +60,11 @@
                                 style="border-radius: 2px 0 0 2px; border-right:#4fc1cb; height: 50px; width:40px; padding: revert;">
                             -
                         </button>
-                        <input class="count-input" value={{count}}
+                        <input type="number" 
+                               class="count-input" value={{count}}
                                style="max-width: 40px; text-align: center; height: 50px; padding: unset;background-clip: unset"/>
                         <button class="count-button" (click)="increase()"
-                                [disabled]="count == product.amount"
+                                [disabled]="count > 19"
                                 style="border-radius: 0 2px 2px 0; border-left: #4fc1cb; height: 50px; width:40px; padding: revert;">
                             +
                         </button>
@@ -78,10 +79,10 @@
             </div>
             <div class="row advices-items">
                 <div class="one-item">
-                    <a href="./item-page"><img
+                    <a [routerLink]="'item-page'"><img
                             src="assets/images/item-page/hookah-pic-2.png"
                             class="hookah-pic-2"/></a>
-                    <a href="./item-page"><p class="advice-item-name">Hartley
+                    <a [routerLink]="'item-page'"><p class="advice-item-name">Hartley
                         Brown & Matte Black...</p></a>
                     <div class="row">
                         <div class="advice-price">
@@ -93,9 +94,9 @@
                     </div>
                 </div>
                 <div class="one-item">
-                    <a href="./item-page"><img
+                    <a [routerLink]="['item-page', product.id]"><img
                             src="assets/images/item-page/hookah-pic-2.png"/></a>
-                    <a href="./item-page"><p class="advice-item-name">Hartley
+                    <a [routerLink]="['item-page', product.id]"><p class="advice-item-name">Hartley
                         Brown & Matte Black...</p></a>
                     <div class="row">
                         <div class="advice-price">
@@ -106,9 +107,9 @@
                     </div>
                 </div>
                 <div class="one-item">
-                    <a href="./item-page"><img
+                    <a [routerLink]="['item-page', product.id]"><img
                             src="assets/images/item-page/hookah-pic-2.png"/></a>
-                    <a href="./item-page"><p class="advice-item-name">Hartley
+                    <a [routerLink]="['item-page', product.id]"><p class="advice-item-name">Hartley
                         Brown & Matte Black...</p></a>
                     <div class="row">
                         <div class="advice-price">

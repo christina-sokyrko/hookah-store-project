@@ -10,7 +10,7 @@
                             <h5>{{slide.type}}</h5>
                             <h1>{{slide.name}}</h1>
                             <p>{{slide.description}}</p>
-                            <a class="to-buy">Придбати</a>
+                            <a class="to-buy" [routerLink]="'shop'">Придбати</a>
                         </div>
                     </div>
                 </ng-template>
@@ -25,7 +25,7 @@
                     <div class="mini-banner">
                         <div class="mini-banner-cont">
                             <h3>Більше 20 видів табаків</h3>
-                            <a class="a-link" href="/inventory">Весь
+                            <a class="a-link" [routerLink]="'shop'">Весь
                                 асортимент</a>
                         </div>
                         <div class="mini-banner-img">
@@ -37,7 +37,7 @@
                     <div class="mini-banner">
                         <div class="mini-banner-cont">
                             <h3>Кальяни і аксесуари</h3>
-                            <a class="a-link" href="#">Онлайн з доставкою</a>
+                            <a class="a-link" [routerLink]="'shop'">Онлайн з доставкою</a>
                         </div>
                         <div class="mini-banner-img">
                             <img [src]="'assets/images/bitmap-2.png'" alt="">
@@ -72,7 +72,9 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content text-center modal-window">
             <div class="modal-body">
-                <p class="question">Вам вже виповнилось 18 років?</p>
+                <p class="question">Даний сайт призначений для використання тими,
+                     хто досяг законного віку для вживання тютюнових виробів.
+                      Ви підтверджуєте, що Вам уже виповнилося 18 років?</p>
                 <button type="button" class="btn btn-default left-button"
                         (click)="confirm()">Так
                 </button>

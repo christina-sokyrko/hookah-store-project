@@ -151,7 +151,7 @@
 
 
 .count-button {
-  background-color: #4fc1cb;;
+  background-color: #4fc1cb;
   border: none;
   color: #fcfcfc;
  
@@ -170,7 +170,11 @@
  color:  #080c17;
   border: none;
  
-  
+}
+.count-input::-webkit-outer-spin-button,
+.count-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 @media screen and (max-width: 764) {
@@ -235,19 +239,28 @@
   height: 100px;
   width: 650px;
   margin: 0;
+  
+  
+
 }
 
 .indicators-img {
   height: 100%;
+  border:none;
+  
 }
 
 .indicator {
   height: 100%;
   margin: 0;
   padding: 0;
-  border: solid 1px white;
-
+  border: none;
 }
+.indicator:active, 
+.indicator:focus {
+    outline: none;
+}
+
 
 .quantity {
   width: 75px;
