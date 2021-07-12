@@ -155,7 +155,8 @@
                             </p>
                         </div>
                         <img src="{{product.picture.url}}"
-                             class="card-img-top" [routerLink]="['item-page', product.id]">
+                             class="card-img-top"
+                             [routerLink]="['item-page', product.id]">
                         <div class="card-body">
                             <a [routerLink]="['item-page', product.id]"><p
                                     class="item-name">{{product.name}}</p>
@@ -172,6 +173,14 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div style="position: fixed; right: 40px; bottom: 20px">
+                    <button *ngIf="isShow" (click)="gotoTop()"
+                            style="background: none; border: none; outline: none">
+                        <i
+                                class="bi bi-arrow-up-circle-fill"
+                                style="font-size: 40px; color: white"></i>
+                    </button>
                 </div>
             </section>
         </div>

@@ -1,4 +1,4 @@
-import {Component, OnInit, OnDestroy} from '@angular/core';
+import {Component, OnInit, OnDestroy, HostListener} from '@angular/core';
 import {InventoryService} from '../../../services/inventory.service';
 import {Subject} from 'rxjs';
 import {CartService} from '../../../services/cart.service';
@@ -17,10 +17,29 @@ export class InventoryPageComponent implements OnInit, OnDestroy {
     cartItems = [];
     items: any = [];
     isChecked: any = {};
+    isShow: boolean;
+    topPosToStartShowing = 100;
 
     constructor(
         public inventoryService: InventoryService,
         private cartService: CartService) {
+    }
+
+    @HostListener('window:scroll')
+    checkScroll() {
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+        console.log('[scroll]', scrollPosition);
+        this.isShow = scrollPosition >= this.topPosToStartShowing;
+    }
+
+    // TODO: Cross browsing
+    gotoTop() {
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
     }
 
     filterProduct(status: any, id: any) {
