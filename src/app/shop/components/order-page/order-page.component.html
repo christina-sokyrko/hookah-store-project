@@ -76,7 +76,7 @@
                                    style="max-width: 40px; text-align: center; height: 30px; padding: unset;background-clip: unset"/>
                            <button class="btn btn-outline-secondary"
                                    style="border-radius: 0 10px 10px 0; height: 30px; padding: revert;"
-                                   [disabled]="item.qtyTotal > 19"
+                                   [disabled]="item.qtyTotal >= item.amount"
                                    (click)="increase(item, i)">+
                            </button>
                         </div>

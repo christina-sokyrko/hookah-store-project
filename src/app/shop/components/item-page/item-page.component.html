@@ -3,8 +3,9 @@
         <section class="path">
             <div class="row left-small">
                 <div class="cell">
-                    <a a [routerLink]="''"><i class="bi bi-house-door home-icon" [routerLink]="''"></i>
-                           </a>
+                    <a [routerLink]="''"><i class="bi bi-house-door home-icon"
+                                            [routerLink]="''"></i>
+                    </a>
                 </div>
                 <div class="cell">
                     <p class="arrow"> > </p>
@@ -54,21 +55,23 @@
                             (click)="addToCart(product)"
                     >Придбати
                     </button>
-                    <div class="btn-group">
+                    <form class="btn-group" [formGroup]="amountForm">
                         <button class="count-button" (click)="decrease()"
                                 [disabled]="count == 1"
                                 style="border-radius: 2px 0 0 2px; border-right:#4fc1cb; height: 50px; width:40px; padding: revert;">
                             -
                         </button>
-                        <input type="number" 
-                               class="count-input" value={{count}}
+                        <input class="count-input" [value]="count"
+                               type="number"
+                               formControlName="amount"
+                               (change)="onChange()"
                                style="max-width: 40px; text-align: center; height: 50px; padding: unset;background-clip: unset"/>
                         <button class="count-button" (click)="increase()"
-                                [disabled]="count > 19"
+                                [disabled]="count == product.amount"
                                 style="border-radius: 0 2px 2px 0; border-left: #4fc1cb; height: 50px; width:40px; padding: revert;">
                             +
                         </button>
-                    </div>
+                    </form>
 
                 </div>
             </div>
@@ -82,41 +85,47 @@
                     <a [routerLink]="'item-page'"><img
                             src="assets/images/item-page/hookah-pic-2.png"
                             class="hookah-pic-2"/></a>
-                    <a [routerLink]="'item-page'"><p class="advice-item-name">Hartley
+                    <a [routerLink]="'item-page'"><p class="advice-item-name">
+                        Hartley
                         Brown & Matte Black...</p></a>
                     <div class="row">
                         <div class="advice-price">
                             <p class="advice-number">149₴</p>
                             <p class="availability">В наявності</p>
                         </div>
-                        <button class="shop"><i class="bi bi-cart-plus shop-icon"></i>
-                          </button>
+                        <button class="shop"><i
+                                class="bi bi-cart-plus shop-icon"></i>
+                        </button>
                     </div>
                 </div>
                 <div class="one-item">
                     <a [routerLink]="['item-page', product.id]"><img
                             src="assets/images/item-page/hookah-pic-2.png"/></a>
-                    <a [routerLink]="['item-page', product.id]"><p class="advice-item-name">Hartley
+                    <a [routerLink]="['item-page', product.id]"><p
+                            class="advice-item-name">Hartley
                         Brown & Matte Black...</p></a>
                     <div class="row">
                         <div class="advice-price">
                             <p class="advice-number">149₴</p>
                             <p class="availability">В наявності</p>
                         </div>
-                        <button class="shop"><i class="bi bi-cart-plus shop-icon"></i></button>
+                        <button class="shop"><i
+                                class="bi bi-cart-plus shop-icon"></i></button>
                     </div>
                 </div>
                 <div class="one-item">
                     <a [routerLink]="['item-page', product.id]"><img
                             src="assets/images/item-page/hookah-pic-2.png"/></a>
-                    <a [routerLink]="['item-page', product.id]"><p class="advice-item-name">Hartley
+                    <a [routerLink]="['item-page', product.id]"><p
+                            class="advice-item-name">Hartley
                         Brown & Matte Black...</p></a>
                     <div class="row">
                         <div class="advice-price">
                             <p class="advice-number">149₴</p>
                             <p class="availability">В наявності</p>
                         </div>
-                        <button class="shop"><i class="bi bi-cart-plus shop-icon"></i></button>
+                        <button class="shop"><i
+                                class="bi bi-cart-plus shop-icon"></i></button>
                     </div>
                 </div>
             </div>

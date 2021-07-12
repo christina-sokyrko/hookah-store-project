@@ -13,8 +13,8 @@ import {OrderPageComponent} from './shop/components/order-page/order-page.compon
 import {AccordionModule} from 'ngx-bootstrap/accordion';
 import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import {CarouselModule} from 'ngx-bootstrap/carousel';
-import {FormsModule} from '@angular/forms';
-import {ModalModule} from 'ngx-bootstrap/modal';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ModalModule } from 'ngx-bootstrap/modal';
 import {NgxMaskModule} from 'ngx-mask';
 
 @NgModule({
@@ -37,6 +37,7 @@ import {NgxMaskModule} from 'ngx-mask';
         FormsModule,
         ModalModule.forRoot(),
         NgxMaskModule.forRoot(),
+        ReactiveFormsModule,
     ],
     providers: [],
     exports: [

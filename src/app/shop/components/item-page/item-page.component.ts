@@ -3,6 +3,7 @@ import {InventoryService} from '../../../services/inventory.service';
 import {CartService} from '../../../services/cart.service';
 import {ActivatedRoute} from '@angular/router';
 import {first} from 'rxjs/operators';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 
 @Component({
@@ -16,16 +17,22 @@ export class ItemPageComponent implements OnInit {
     product: any = {};
     cartItems = [];
     count = 1;
+    number: number;
+    amountForm: FormGroup;
 
 
     constructor(
         private inventoryService: InventoryService,
         private cartService: CartService,
         private route: ActivatedRoute,
+        private formBuilder: FormBuilder
     ) {
+        this.amountForm = formBuilder.group({
+            amount: new FormControl('1', {
+                validators: Validators.max(this.product.amount),
+            })
+        });
     }
-
-
 
     activeSlide = 0;
 
@@ -41,7 +48,7 @@ export class ItemPageComponent implements OnInit {
 
     addToCart(item) {
         if (!this.cartService.itemInCart(item)) {
-            item.qtyTotal = this.count;
+            item.qtyTotal = this.amountForm.get('amount').value || this.count;
             this.cartService.addToCart(item);
             this.cartItems = [...this.cartService.getItems()];
         }
@@ -50,7 +57,14 @@ export class ItemPageComponent implements OnInit {
     switchSlide(i) {
         this.activeSlide = i;
     }
-    
+
+
+    onChange() {
+        const a: number = Number(this.amountForm.get('amount').value);
+        if (a > Number(this.product.amount)) {
+            this.amountForm.controls.amount.setValue(this.product.amount);
+        }
+    }
 
     ngOnInit(): void {
         this.id = this.route.snapshot.params.id;
