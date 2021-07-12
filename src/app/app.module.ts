@@ -14,7 +14,8 @@ import {AccordionModule} from 'ngx-bootstrap/accordion';
 import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import {CarouselModule} from 'ngx-bootstrap/carousel';
 import {FormsModule} from '@angular/forms';
-import { ModalModule } from 'ngx-bootstrap/modal';
+import {ModalModule} from 'ngx-bootstrap/modal';
+import {NgxMaskModule} from 'ngx-mask';
 
 @NgModule({
     declarations: [
@@ -35,6 +36,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
         CarouselModule,
         FormsModule,
         ModalModule.forRoot(),
+        NgxMaskModule.forRoot(),
     ],
     providers: [],
     exports: [

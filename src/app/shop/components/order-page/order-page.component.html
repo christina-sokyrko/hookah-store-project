@@ -18,9 +18,10 @@
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text"
-                              id="basic-addon2">Телефон</span>
+                              id="basic-addon2">+380</span>
                     </div>
-                    <input type="text" class="form-control"
+                    <input type="tel" class="form-control"
+                           [mask]="'000-000-000'"
                            placeholder="Введіть контактний номер телефону"
                            aria-label="Username"
                            aria-describedby="basic-addon1">
@@ -37,9 +38,9 @@
                 </div>
             </div>
             <div class="buttons">
-                
+
                 <button class="btn dark-btn left-btn" onclick="document.location='shop'">Назад</button>
-                
+
                 <button class="btn primary-btn right-btn">Продовжити</button>
             </div>
         </div>
@@ -67,7 +68,7 @@
                                     style="border-radius:  10px 0 0 10px; height: 30px; padding: revert;"
                                     (click)="decrease(item, i)">-
                             </button>
-                            
+
                             <input [(ngModel)]="item.qtyTotal"
                                    value="{{ item.qtyTotal }}"
                                    (change)="changeSubtotal(item ,i)"
