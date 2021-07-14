@@ -12,7 +12,6 @@ export class InventoryPageComponent implements OnInit, OnDestroy {
     public inventoryDestroyed$: Subject<void> = new Subject<void>();
     categories: any = [];
     subCategories: any = [];
-    products: any = [];
     isContentOpen: any = {};
     cartItems = [];
     items: any = [];
@@ -28,12 +27,9 @@ export class InventoryPageComponent implements OnInit, OnDestroy {
     @HostListener('window:scroll')
     checkScroll() {
         const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-
-        console.log('[scroll]', scrollPosition);
         this.isShow = scrollPosition >= this.topPosToStartShowing;
     }
 
-    // TODO: Cross browsing
     gotoTop() {
         window.scroll({
             top: 0,
@@ -48,7 +44,9 @@ export class InventoryPageComponent implements OnInit, OnDestroy {
                 if (status === true) {
                     this.items.push(value);
                 } else {
-                    this.items.splice(value, 1);
+                    this.items.splice(this.items.findIndex(i => {
+                        return i.id === value.id;
+                    }), 1);
                 }
             });
         });
