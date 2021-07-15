@@ -28,6 +28,11 @@ export class InventoryPageComponent implements OnInit, OnDestroy {
     checkScroll() {
         const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         this.isShow = scrollPosition >= this.topPosToStartShowing;
+
+        const navbar = document.querySelector<HTMLElement>('.main-wrapper .navbar');
+        const navbarHeight = navbar.offsetHeight + navbar.offsetTop;
+        const sidebarOffsetTop = scrollPosition > navbarHeight ? 0 : navbarHeight - scrollPosition;
+        document.querySelector<HTMLElement>('.side-bar').style.top = sidebarOffsetTop + 'px';
     }
 
     gotoTop() {
