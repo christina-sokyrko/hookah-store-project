@@ -56,7 +56,6 @@
 .side-bar {
  position: fixed;
  
-  height: 100%;
   min-width: 300px;
   margin: 7px 15px ;
  
@@ -177,14 +176,25 @@ margin-left: 300px;
   padding: 0;
 }
 
-::ng-deep .card .card-header {
-  border-bottom: solid 1px #2e3236;
+::ng-deep .panel-group .panel + .panel {
+  border-top: solid 1px #2e3236;
 }
 
 ::ng-deep .card .card-header .btn-link {
   color: white;
   text-decoration: none;
   font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+
+  span {
+    margin-left: auto;
+
+    p {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
 }
 
 ::ng-deep .collapsed-menu {
