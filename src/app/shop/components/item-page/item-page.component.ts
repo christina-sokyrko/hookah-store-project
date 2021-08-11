@@ -58,6 +58,16 @@ export class ItemPageComponent implements OnInit {
         this.activeSlide = i;
     }
 
+    onSlide(event) {
+        const element = document.querySelectorAll<HTMLElement>('.indicators .indicator')[this.activeSlide];
+        const parent = element.parentNode as HTMLElement;
+        let scrollLeft = parent.scrollLeft;
+        if (parent.scrollLeft > element.offsetLeft) {
+            scrollLeft = element.offsetLeft - 20; }
+        if (parent.scrollLeft + parent.offsetWidth < element.offsetLeft + element.offsetWidth) {
+            scrollLeft = element.offsetLeft + element.offsetWidth - parent.offsetWidth + 20; }
+        parent.scrollLeft = scrollLeft;
+    }
 
     onChange() {
         const a: number = Number(this.amountForm.get('amount').value);

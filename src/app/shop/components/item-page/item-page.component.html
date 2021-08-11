@@ -25,7 +25,8 @@
             <div class="col-md-6">
                 <div class="big-pic">
                     <carousel [showIndicators]="false" [isAnimated]="true"
-                              [(activeSlide)]="activeSlide">
+                              [(activeSlide)]="activeSlide"
+                              (activeSlideChange)="onSlide($event)">
                         <slide class="slider" *ngFor="let slide of slides">
                             <img [src]="slide.image"
                                  style="display: block; width: 100%;">
